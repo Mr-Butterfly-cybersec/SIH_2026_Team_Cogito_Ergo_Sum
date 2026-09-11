@@ -1,14 +1,24 @@
 # Reviewers auto-requested per pull request.
 #
-# Everything currently routes to the repo owner. When teammates are added as collaborators,
-# give each one their module here so their reviews are requested automatically — for example:
+# Currently everything routes to the repo owner, so every teammate PR gets a review from the
+# owner (which main requires — 1 approval, plus both CI jobs green).
 #
-#   /backend/app/optimization/   @their-username
+# To spread reviews, point a module at its owner. The team handles:
+#
+#   Mr-Butterfly-cybersec   (owner)
+#   anonymous-baka
+#   RishuPandey02
+#   GauriAdelkar
+#   vedbhavsar242-svg
+#
+# Example:
+#
+#   /backend/app/optimization/   @vedbhavsar242-svg
 #
 # Note: GitHub silently ignores handles that do not exist, so an unresolved @name here fails
 # quietly rather than raising an error.
 
-# --- default ---
+# --- default: everything reaches the owner ---
 *                           @Mr-Butterfly-cybersec
 
 # --- backend ---
@@ -31,3 +41,4 @@
 /docs/                      @Mr-Butterfly-cybersec
 /infra/                     @Mr-Butterfly-cybersec
 /.github/                   @Mr-Butterfly-cybersec
+
