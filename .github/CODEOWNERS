@@ -1,0 +1,44 @@
+# Reviewers auto-requested per pull request, by module ownership.
+#
+# Six modules, so no two contributors ever edit the same file.
+#
+# TODO(owner): replace the five @teammate-* placeholders with real GitHub usernames
+# before the first teammate pull request, or GitHub will silently ignore those lines.
+#
+# Syntax: <pattern>  <owner> [additional owners...]
+
+# --- root / shared (maintained by the repo owner) ---
+*                       @Mr-Butterfly-cybersec
+
+# --- module 1: risk core + API surface ---
+/backend/app/risk/      @Mr-Butterfly-cybersec
+/backend/app/api/       @Mr-Butterfly-cybersec
+/backend/app/main.py    @Mr-Butterfly-cybersec
+
+# --- module 2: evidence ingestion ---
+/backend/app/ingestion/ @teammate-ingestion
+/backend/app/jobs/      @teammate-ingestion
+
+# --- module 3: investment optimizer ---
+/backend/app/optimization/  @teammate-optimizer
+
+# --- module 4: compliance & frameworks ---
+/backend/app/compliance/    @teammate-compliance
+
+# --- module 5: AI / explanation layer ---
+/backend/app/ai/        @teammate-ai
+
+# --- module 6: frontend dashboard ---
+/frontend/src/          @teammate-frontend
+
+# --- shared backend infrastructure (repo owner) ---
+/backend/tests/         @Mr-Butterfly-cybersec
+/backend/app/engine/    @Mr-Butterfly-cybersec
+/backend/app/models/    @Mr-Butterfly-cybersec
+/backend/app/seed/      @Mr-Butterfly-cybersec
+/backend/app/normalization/ @Mr-Butterfly-cybersec
+
+# --- docs, infra, CI ---
+/docs/                  @Mr-Butterfly-cybersec
+/infra/                 @Mr-Butterfly-cybersec
+/.github/               @Mr-Butterfly-cybersec

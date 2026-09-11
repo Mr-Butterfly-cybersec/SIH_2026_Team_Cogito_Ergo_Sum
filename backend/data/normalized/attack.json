@@ -1,0 +1,9059 @@
+{
+  "mitigations": {
+    "M1013": "Application Developer Guidance",
+    "M1015": "Active Directory Configuration",
+    "M1016": "Vulnerability Scanning",
+    "M1017": "User Training",
+    "M1018": "User Account Management",
+    "M1019": "Threat Intelligence Program",
+    "M1020": "SSL/TLS Inspection",
+    "M1021": "Restrict Web-Based Content",
+    "M1022": "Restrict File and Directory Permissions",
+    "M1024": "Restrict Registry Permissions",
+    "M1025": "Privileged Process Integrity",
+    "M1026": "Privileged Account Management",
+    "M1027": "Password Policies",
+    "M1028": "Operating System Configuration",
+    "M1029": "Remote Data Storage",
+    "M1030": "Network Segmentation",
+    "M1031": "Network Intrusion Prevention",
+    "M1032": "Multi-factor Authentication",
+    "M1033": "Limit Software Installation",
+    "M1034": "Limit Hardware Installation",
+    "M1035": "Limit Access to Resource Over Network",
+    "M1036": "Account Use Policies",
+    "M1037": "Filter Network Traffic",
+    "M1038": "Execution Prevention",
+    "M1039": "Environment Variable Permissions",
+    "M1040": "Behavior Prevention on Endpoint",
+    "M1041": "Encrypt Sensitive Information",
+    "M1042": "Disable or Remove Feature or Program",
+    "M1043": "Credential Access Protection",
+    "M1044": "Restrict Library Loading",
+    "M1045": "Code Signing",
+    "M1046": "Boot Integrity",
+    "M1047": "Audit",
+    "M1048": "Application Isolation and Sandboxing",
+    "M1049": "Antivirus/Antimalware",
+    "M1050": "Exploit Protection",
+    "M1051": "Update Software",
+    "M1052": "User Account Control",
+    "M1053": "Data Backup",
+    "M1054": "Software Configuration",
+    "M1055": "Do Not Mitigate",
+    "M1056": "Pre-compromise",
+    "M1057": "Data Loss Prevention",
+    "M1060": "Out-of-Band Communications Channel"
+  },
+  "tactics": [
+    "collection",
+    "command-and-control",
+    "credential-access",
+    "defense-impairment",
+    "discovery",
+    "execution",
+    "exfiltration",
+    "impact",
+    "initial-access",
+    "lateral-movement",
+    "persistence",
+    "privilege-escalation",
+    "reconnaissance",
+    "resource-development",
+    "stealth"
+  ],
+  "techniques": {
+    "T1001": {
+      "id": "T1001",
+      "is_subtechnique": false,
+      "name": "Data Obfuscation",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1001.001": {
+      "id": "T1001.001",
+      "is_subtechnique": true,
+      "name": "Junk Data",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1001.002": {
+      "id": "T1001.002",
+      "is_subtechnique": true,
+      "name": "Steganography",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1001.003": {
+      "id": "T1001.003",
+      "is_subtechnique": true,
+      "name": "Protocol or Service Impersonation",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1003": {
+      "id": "T1003",
+      "is_subtechnique": false,
+      "name": "OS Credential Dumping",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.001": {
+      "id": "T1003.001",
+      "is_subtechnique": true,
+      "name": "LSASS Memory",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.002": {
+      "id": "T1003.002",
+      "is_subtechnique": true,
+      "name": "Security Account Manager",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.003": {
+      "id": "T1003.003",
+      "is_subtechnique": true,
+      "name": "NTDS",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.004": {
+      "id": "T1003.004",
+      "is_subtechnique": true,
+      "name": "LSA Secrets",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.005": {
+      "id": "T1003.005",
+      "is_subtechnique": true,
+      "name": "Cached Domain Credentials",
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.006": {
+      "id": "T1003.006",
+      "is_subtechnique": true,
+      "name": "DCSync",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.007": {
+      "id": "T1003.007",
+      "is_subtechnique": true,
+      "name": "Proc Filesystem",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1003.008": {
+      "id": "T1003.008",
+      "is_subtechnique": true,
+      "name": "/etc/passwd and /etc/shadow",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1005": {
+      "id": "T1005",
+      "is_subtechnique": false,
+      "name": "Data from Local System",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1006": {
+      "id": "T1006",
+      "is_subtechnique": false,
+      "name": "Direct Volume Access",
+      "platforms": [
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1007": {
+      "id": "T1007",
+      "is_subtechnique": false,
+      "name": "System Service Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1008": {
+      "id": "T1008",
+      "is_subtechnique": false,
+      "name": "Fallback Channels",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1010": {
+      "id": "T1010",
+      "is_subtechnique": false,
+      "name": "Application Window Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1011": {
+      "id": "T1011",
+      "is_subtechnique": false,
+      "name": "Exfiltration Over Other Network Medium",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1011.001": {
+      "id": "T1011.001",
+      "is_subtechnique": true,
+      "name": "Exfiltration Over Bluetooth",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1012": {
+      "id": "T1012",
+      "is_subtechnique": false,
+      "name": "Query Registry",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1014": {
+      "id": "T1014",
+      "is_subtechnique": false,
+      "name": "Rootkit",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1016": {
+      "id": "T1016",
+      "is_subtechnique": false,
+      "name": "System Network Configuration Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1016.001": {
+      "id": "T1016.001",
+      "is_subtechnique": true,
+      "name": "Internet Connection Discovery",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "ESXi"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1016.002": {
+      "id": "T1016.002",
+      "is_subtechnique": true,
+      "name": "Wi-Fi Discovery",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1018": {
+      "id": "T1018",
+      "is_subtechnique": false,
+      "name": "Remote System Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1020": {
+      "id": "T1020",
+      "is_subtechnique": false,
+      "name": "Automated Exfiltration",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1020.001": {
+      "id": "T1020.001",
+      "is_subtechnique": true,
+      "name": "Traffic Duplication",
+      "platforms": [
+        "Network Devices",
+        "IaaS"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1021": {
+      "id": "T1021",
+      "is_subtechnique": false,
+      "name": "Remote Services",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "IaaS",
+        "ESXi"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.001": {
+      "id": "T1021.001",
+      "is_subtechnique": true,
+      "name": "Remote Desktop Protocol",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.002": {
+      "id": "T1021.002",
+      "is_subtechnique": true,
+      "name": "SMB/Windows Admin Shares",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.003": {
+      "id": "T1021.003",
+      "is_subtechnique": true,
+      "name": "Distributed Component Object Model",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.004": {
+      "id": "T1021.004",
+      "is_subtechnique": true,
+      "name": "SSH",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.005": {
+      "id": "T1021.005",
+      "is_subtechnique": true,
+      "name": "VNC",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.006": {
+      "id": "T1021.006",
+      "is_subtechnique": true,
+      "name": "Windows Remote Management",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.007": {
+      "id": "T1021.007",
+      "is_subtechnique": true,
+      "name": "Cloud Services",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1021.008": {
+      "id": "T1021.008",
+      "is_subtechnique": true,
+      "name": "Direct Cloud VM Connections",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1025": {
+      "id": "T1025",
+      "is_subtechnique": false,
+      "name": "Data from Removable Media",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1027": {
+      "id": "T1027",
+      "is_subtechnique": false,
+      "name": "Obfuscated Files or Information",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.001": {
+      "id": "T1027.001",
+      "is_subtechnique": true,
+      "name": "Binary Padding",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.002": {
+      "id": "T1027.002",
+      "is_subtechnique": true,
+      "name": "Software Packing",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.003": {
+      "id": "T1027.003",
+      "is_subtechnique": true,
+      "name": "Steganography",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.004": {
+      "id": "T1027.004",
+      "is_subtechnique": true,
+      "name": "Compile After Delivery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.005": {
+      "id": "T1027.005",
+      "is_subtechnique": true,
+      "name": "Indicator Removal from Tools",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.006": {
+      "id": "T1027.006",
+      "is_subtechnique": true,
+      "name": "HTML Smuggling",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.007": {
+      "id": "T1027.007",
+      "is_subtechnique": true,
+      "name": "Dynamic API Resolution",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.008": {
+      "id": "T1027.008",
+      "is_subtechnique": true,
+      "name": "Stripped Payloads",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.009": {
+      "id": "T1027.009",
+      "is_subtechnique": true,
+      "name": "Embedded Payloads",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.010": {
+      "id": "T1027.010",
+      "is_subtechnique": true,
+      "name": "Command Obfuscation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.011": {
+      "id": "T1027.011",
+      "is_subtechnique": true,
+      "name": "Fileless Storage",
+      "platforms": [
+        "Linux",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.012": {
+      "id": "T1027.012",
+      "is_subtechnique": true,
+      "name": "LNK Icon Smuggling",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.013": {
+      "id": "T1027.013",
+      "is_subtechnique": true,
+      "name": "Encrypted/Encoded File",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.014": {
+      "id": "T1027.014",
+      "is_subtechnique": true,
+      "name": "Polymorphic Code",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.015": {
+      "id": "T1027.015",
+      "is_subtechnique": true,
+      "name": "Compression",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.016": {
+      "id": "T1027.016",
+      "is_subtechnique": true,
+      "name": "Junk Code Insertion",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.017": {
+      "id": "T1027.017",
+      "is_subtechnique": true,
+      "name": "SVG Smuggling",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1027.018": {
+      "id": "T1027.018",
+      "is_subtechnique": true,
+      "name": "Invisible Unicode",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1029": {
+      "id": "T1029",
+      "is_subtechnique": false,
+      "name": "Scheduled Transfer",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1030": {
+      "id": "T1030",
+      "is_subtechnique": false,
+      "name": "Data Transfer Size Limits",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1033": {
+      "id": "T1033",
+      "is_subtechnique": false,
+      "name": "System Owner/User Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1036": {
+      "id": "T1036",
+      "is_subtechnique": false,
+      "name": "Masquerading",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.001": {
+      "id": "T1036.001",
+      "is_subtechnique": true,
+      "name": "Invalid Code Signature",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.002": {
+      "id": "T1036.002",
+      "is_subtechnique": true,
+      "name": "Right-to-Left Override",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.003": {
+      "id": "T1036.003",
+      "is_subtechnique": true,
+      "name": "Rename Legitimate Utilities",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.004": {
+      "id": "T1036.004",
+      "is_subtechnique": true,
+      "name": "Masquerade Task or Service",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.005": {
+      "id": "T1036.005",
+      "is_subtechnique": true,
+      "name": "Match Legitimate Resource Name or Location",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.006": {
+      "id": "T1036.006",
+      "is_subtechnique": true,
+      "name": "Space after Filename",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.007": {
+      "id": "T1036.007",
+      "is_subtechnique": true,
+      "name": "Double File Extension",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.008": {
+      "id": "T1036.008",
+      "is_subtechnique": true,
+      "name": "Masquerade File Type",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.009": {
+      "id": "T1036.009",
+      "is_subtechnique": true,
+      "name": "Break Process Trees",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.010": {
+      "id": "T1036.010",
+      "is_subtechnique": true,
+      "name": "Masquerade Account Name",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.011": {
+      "id": "T1036.011",
+      "is_subtechnique": true,
+      "name": "Overwrite Process Arguments",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1036.012": {
+      "id": "T1036.012",
+      "is_subtechnique": true,
+      "name": "Browser Fingerprint",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1037": {
+      "id": "T1037",
+      "is_subtechnique": false,
+      "name": "Boot or Logon Initialization Scripts",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1037.001": {
+      "id": "T1037.001",
+      "is_subtechnique": true,
+      "name": "Logon Script (Windows)",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1037.002": {
+      "id": "T1037.002",
+      "is_subtechnique": true,
+      "name": "Login Hook",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1037.003": {
+      "id": "T1037.003",
+      "is_subtechnique": true,
+      "name": "Network Logon Script",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1037.004": {
+      "id": "T1037.004",
+      "is_subtechnique": true,
+      "name": "RC Scripts",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Network Devices",
+        "ESXi"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1037.005": {
+      "id": "T1037.005",
+      "is_subtechnique": true,
+      "name": "Startup Items",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1039": {
+      "id": "T1039",
+      "is_subtechnique": false,
+      "name": "Data from Network Shared Drive",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1040": {
+      "id": "T1040",
+      "is_subtechnique": false,
+      "name": "Network Sniffing",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access",
+        "discovery"
+      ]
+    },
+    "T1041": {
+      "id": "T1041",
+      "is_subtechnique": false,
+      "name": "Exfiltration Over C2 Channel",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1046": {
+      "id": "T1046",
+      "is_subtechnique": false,
+      "name": "Network Service Discovery",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1047": {
+      "id": "T1047",
+      "is_subtechnique": false,
+      "name": "Windows Management Instrumentation",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1048": {
+      "id": "T1048",
+      "is_subtechnique": false,
+      "name": "Exfiltration Over Alternative Protocol",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1048.001": {
+      "id": "T1048.001",
+      "is_subtechnique": true,
+      "name": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1048.002": {
+      "id": "T1048.002",
+      "is_subtechnique": true,
+      "name": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1048.003": {
+      "id": "T1048.003",
+      "is_subtechnique": true,
+      "name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1049": {
+      "id": "T1049",
+      "is_subtechnique": false,
+      "name": "System Network Connections Discovery",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1052": {
+      "id": "T1052",
+      "is_subtechnique": false,
+      "name": "Exfiltration Over Physical Medium",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1052.001": {
+      "id": "T1052.001",
+      "is_subtechnique": true,
+      "name": "Exfiltration over USB",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1053": {
+      "id": "T1053",
+      "is_subtechnique": false,
+      "name": "Scheduled Task/Job",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1053.002": {
+      "id": "T1053.002",
+      "is_subtechnique": true,
+      "name": "At",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1053.003": {
+      "id": "T1053.003",
+      "is_subtechnique": true,
+      "name": "Cron",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "ESXi"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1053.005": {
+      "id": "T1053.005",
+      "is_subtechnique": true,
+      "name": "Scheduled Task",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1053.006": {
+      "id": "T1053.006",
+      "is_subtechnique": true,
+      "name": "Systemd Timers",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1053.007": {
+      "id": "T1053.007",
+      "is_subtechnique": true,
+      "name": "Container Orchestration Job",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "execution",
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1055": {
+      "id": "T1055",
+      "is_subtechnique": false,
+      "name": "Process Injection",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.001": {
+      "id": "T1055.001",
+      "is_subtechnique": true,
+      "name": "Dynamic-link Library Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.002": {
+      "id": "T1055.002",
+      "is_subtechnique": true,
+      "name": "Portable Executable Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.003": {
+      "id": "T1055.003",
+      "is_subtechnique": true,
+      "name": "Thread Execution Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.004": {
+      "id": "T1055.004",
+      "is_subtechnique": true,
+      "name": "Asynchronous Procedure Call",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.005": {
+      "id": "T1055.005",
+      "is_subtechnique": true,
+      "name": "Thread Local Storage",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.008": {
+      "id": "T1055.008",
+      "is_subtechnique": true,
+      "name": "Ptrace System Calls",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.009": {
+      "id": "T1055.009",
+      "is_subtechnique": true,
+      "name": "Proc Memory",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.011": {
+      "id": "T1055.011",
+      "is_subtechnique": true,
+      "name": "Extra Window Memory Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.012": {
+      "id": "T1055.012",
+      "is_subtechnique": true,
+      "name": "Process Hollowing",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.013": {
+      "id": "T1055.013",
+      "is_subtechnique": true,
+      "name": "Process Doppelg\u00e4nging",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.014": {
+      "id": "T1055.014",
+      "is_subtechnique": true,
+      "name": "VDSO Hijacking",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1055.015": {
+      "id": "T1055.015",
+      "is_subtechnique": true,
+      "name": "ListPlanting",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1056": {
+      "id": "T1056",
+      "is_subtechnique": false,
+      "name": "Input Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "collection",
+        "credential-access"
+      ]
+    },
+    "T1056.001": {
+      "id": "T1056.001",
+      "is_subtechnique": true,
+      "name": "Keylogging",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "collection",
+        "credential-access"
+      ]
+    },
+    "T1056.002": {
+      "id": "T1056.002",
+      "is_subtechnique": true,
+      "name": "GUI Input Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection",
+        "credential-access"
+      ]
+    },
+    "T1056.003": {
+      "id": "T1056.003",
+      "is_subtechnique": true,
+      "name": "Web Portal Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection",
+        "credential-access"
+      ]
+    },
+    "T1056.004": {
+      "id": "T1056.004",
+      "is_subtechnique": true,
+      "name": "Credential API Hooking",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "collection",
+        "credential-access"
+      ]
+    },
+    "T1057": {
+      "id": "T1057",
+      "is_subtechnique": false,
+      "name": "Process Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1059": {
+      "id": "T1059",
+      "is_subtechnique": false,
+      "name": "Command and Scripting Interpreter",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.001": {
+      "id": "T1059.001",
+      "is_subtechnique": true,
+      "name": "PowerShell",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.002": {
+      "id": "T1059.002",
+      "is_subtechnique": true,
+      "name": "AppleScript",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.003": {
+      "id": "T1059.003",
+      "is_subtechnique": true,
+      "name": "Windows Command Shell",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.004": {
+      "id": "T1059.004",
+      "is_subtechnique": true,
+      "name": "Unix Shell",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.005": {
+      "id": "T1059.005",
+      "is_subtechnique": true,
+      "name": "Visual Basic",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.006": {
+      "id": "T1059.006",
+      "is_subtechnique": true,
+      "name": "Python",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.007": {
+      "id": "T1059.007",
+      "is_subtechnique": true,
+      "name": "JavaScript",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.008": {
+      "id": "T1059.008",
+      "is_subtechnique": true,
+      "name": "Network Device CLI",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.009": {
+      "id": "T1059.009",
+      "is_subtechnique": true,
+      "name": "Cloud API",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.010": {
+      "id": "T1059.010",
+      "is_subtechnique": true,
+      "name": "AutoHotKey & AutoIT",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.011": {
+      "id": "T1059.011",
+      "is_subtechnique": true,
+      "name": "Lua",
+      "platforms": [
+        "Linux",
+        "Network Devices",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.012": {
+      "id": "T1059.012",
+      "is_subtechnique": true,
+      "name": "Hypervisor CLI",
+      "platforms": [
+        "ESXi"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1059.013": {
+      "id": "T1059.013",
+      "is_subtechnique": true,
+      "name": "Container CLI/API",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1068": {
+      "id": "T1068",
+      "is_subtechnique": false,
+      "name": "Exploitation for Privilege Escalation",
+      "platforms": [
+        "Containers",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1069": {
+      "id": "T1069",
+      "is_subtechnique": false,
+      "name": "Permission Groups Discovery",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1069.001": {
+      "id": "T1069.001",
+      "is_subtechnique": true,
+      "name": "Local Groups",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1069.002": {
+      "id": "T1069.002",
+      "is_subtechnique": true,
+      "name": "Domain Groups",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1069.003": {
+      "id": "T1069.003",
+      "is_subtechnique": true,
+      "name": "Cloud Groups",
+      "platforms": [
+        "SaaS",
+        "IaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1070": {
+      "id": "T1070",
+      "is_subtechnique": false,
+      "name": "Indicator Removal",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.003": {
+      "id": "T1070.003",
+      "is_subtechnique": true,
+      "name": "Clear Command History",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.004": {
+      "id": "T1070.004",
+      "is_subtechnique": true,
+      "name": "File Deletion",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.005": {
+      "id": "T1070.005",
+      "is_subtechnique": true,
+      "name": "Network Share Connection Removal",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.006": {
+      "id": "T1070.006",
+      "is_subtechnique": true,
+      "name": "Timestomp",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.007": {
+      "id": "T1070.007",
+      "is_subtechnique": true,
+      "name": "Clear Network Connection History and Configurations",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Network Devices"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.008": {
+      "id": "T1070.008",
+      "is_subtechnique": true,
+      "name": "Clear Mailbox Data",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.009": {
+      "id": "T1070.009",
+      "is_subtechnique": true,
+      "name": "Clear Persistence",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1070.010": {
+      "id": "T1070.010",
+      "is_subtechnique": true,
+      "name": "Relocate Malware",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1071": {
+      "id": "T1071",
+      "is_subtechnique": false,
+      "name": "Application Layer Protocol",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Network Devices",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1071.001": {
+      "id": "T1071.001",
+      "is_subtechnique": true,
+      "name": "Web Protocols",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1071.002": {
+      "id": "T1071.002",
+      "is_subtechnique": true,
+      "name": "File Transfer Protocols",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1071.003": {
+      "id": "T1071.003",
+      "is_subtechnique": true,
+      "name": "Mail Protocols",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1071.004": {
+      "id": "T1071.004",
+      "is_subtechnique": true,
+      "name": "DNS",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1071.005": {
+      "id": "T1071.005",
+      "is_subtechnique": true,
+      "name": "Publish/Subscribe Protocols",
+      "platforms": [
+        "macOS",
+        "Linux",
+        "Windows",
+        "Network Devices"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1072": {
+      "id": "T1072",
+      "is_subtechnique": false,
+      "name": "Software Deployment Tools",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution",
+        "lateral-movement"
+      ]
+    },
+    "T1074": {
+      "id": "T1074",
+      "is_subtechnique": false,
+      "name": "Data Staged",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1074.001": {
+      "id": "T1074.001",
+      "is_subtechnique": true,
+      "name": "Local Data Staging",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1074.002": {
+      "id": "T1074.002",
+      "is_subtechnique": true,
+      "name": "Remote Data Staging",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1078": {
+      "id": "T1078",
+      "is_subtechnique": false,
+      "name": "Valid Accounts",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "privilege-escalation",
+        "initial-access"
+      ]
+    },
+    "T1078.001": {
+      "id": "T1078.001",
+      "is_subtechnique": true,
+      "name": "Default Accounts",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "privilege-escalation",
+        "initial-access"
+      ]
+    },
+    "T1078.002": {
+      "id": "T1078.002",
+      "is_subtechnique": true,
+      "name": "Domain Accounts",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "privilege-escalation",
+        "initial-access"
+      ]
+    },
+    "T1078.003": {
+      "id": "T1078.003",
+      "is_subtechnique": true,
+      "name": "Local Accounts",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "privilege-escalation",
+        "initial-access"
+      ]
+    },
+    "T1078.004": {
+      "id": "T1078.004",
+      "is_subtechnique": true,
+      "name": "Cloud Accounts",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "privilege-escalation",
+        "initial-access"
+      ]
+    },
+    "T1080": {
+      "id": "T1080",
+      "is_subtechnique": false,
+      "name": "Taint Shared Content",
+      "platforms": [
+        "Windows",
+        "SaaS",
+        "Linux",
+        "macOS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1082": {
+      "id": "T1082",
+      "is_subtechnique": false,
+      "name": "System Information Discovery",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1083": {
+      "id": "T1083",
+      "is_subtechnique": false,
+      "name": "File and Directory Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1087": {
+      "id": "T1087",
+      "is_subtechnique": false,
+      "name": "Account Discovery",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1087.001": {
+      "id": "T1087.001",
+      "is_subtechnique": true,
+      "name": "Local Account",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1087.002": {
+      "id": "T1087.002",
+      "is_subtechnique": true,
+      "name": "Domain Account",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1087.003": {
+      "id": "T1087.003",
+      "is_subtechnique": true,
+      "name": "Email Account",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1087.004": {
+      "id": "T1087.004",
+      "is_subtechnique": true,
+      "name": "Cloud Account",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1090": {
+      "id": "T1090",
+      "is_subtechnique": false,
+      "name": "Proxy",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1090.001": {
+      "id": "T1090.001",
+      "is_subtechnique": true,
+      "name": "Internal Proxy",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1090.002": {
+      "id": "T1090.002",
+      "is_subtechnique": true,
+      "name": "External Proxy",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1090.003": {
+      "id": "T1090.003",
+      "is_subtechnique": true,
+      "name": "Multi-hop Proxy",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1090.004": {
+      "id": "T1090.004",
+      "is_subtechnique": true,
+      "name": "Domain Fronting",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1091": {
+      "id": "T1091",
+      "is_subtechnique": false,
+      "name": "Replication Through Removable Media",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement",
+        "initial-access"
+      ]
+    },
+    "T1092": {
+      "id": "T1092",
+      "is_subtechnique": false,
+      "name": "Communication Through Removable Media",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1095": {
+      "id": "T1095",
+      "is_subtechnique": false,
+      "name": "Non-Application Layer Protocol",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1098": {
+      "id": "T1098",
+      "is_subtechnique": false,
+      "name": "Account Manipulation",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.001": {
+      "id": "T1098.001",
+      "is_subtechnique": true,
+      "name": "Additional Cloud Credentials",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "SaaS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.002": {
+      "id": "T1098.002",
+      "is_subtechnique": true,
+      "name": "Additional Email Delegate Permissions",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.003": {
+      "id": "T1098.003",
+      "is_subtechnique": true,
+      "name": "Additional Cloud Roles",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.004": {
+      "id": "T1098.004",
+      "is_subtechnique": true,
+      "name": "SSH Authorized Keys",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.005": {
+      "id": "T1098.005",
+      "is_subtechnique": true,
+      "name": "Device Registration",
+      "platforms": [
+        "Windows",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.006": {
+      "id": "T1098.006",
+      "is_subtechnique": true,
+      "name": "Additional Container Cluster Roles",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1098.007": {
+      "id": "T1098.007",
+      "is_subtechnique": true,
+      "name": "Additional Local or Domain Groups",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1102": {
+      "id": "T1102",
+      "is_subtechnique": false,
+      "name": "Web Service",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1102.001": {
+      "id": "T1102.001",
+      "is_subtechnique": true,
+      "name": "Dead Drop Resolver",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1102.002": {
+      "id": "T1102.002",
+      "is_subtechnique": true,
+      "name": "Bidirectional Communication",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1102.003": {
+      "id": "T1102.003",
+      "is_subtechnique": true,
+      "name": "One-Way Communication",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1104": {
+      "id": "T1104",
+      "is_subtechnique": false,
+      "name": "Multi-Stage Channels",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1105": {
+      "id": "T1105",
+      "is_subtechnique": false,
+      "name": "Ingress Tool Transfer",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1106": {
+      "id": "T1106",
+      "is_subtechnique": false,
+      "name": "Native API",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1110": {
+      "id": "T1110",
+      "is_subtechnique": false,
+      "name": "Brute Force",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1110.001": {
+      "id": "T1110.001",
+      "is_subtechnique": true,
+      "name": "Password Guessing",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1110.002": {
+      "id": "T1110.002",
+      "is_subtechnique": true,
+      "name": "Password Cracking",
+      "platforms": [
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1110.003": {
+      "id": "T1110.003",
+      "is_subtechnique": true,
+      "name": "Password Spraying",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1110.004": {
+      "id": "T1110.004",
+      "is_subtechnique": true,
+      "name": "Credential Stuffing",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1111": {
+      "id": "T1111",
+      "is_subtechnique": false,
+      "name": "Multi-Factor Authentication Interception",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1112": {
+      "id": "T1112",
+      "is_subtechnique": false,
+      "name": "Modify Registry",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence"
+      ]
+    },
+    "T1113": {
+      "id": "T1113",
+      "is_subtechnique": false,
+      "name": "Screen Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1114": {
+      "id": "T1114",
+      "is_subtechnique": false,
+      "name": "Email Collection",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Office Suite"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1114.001": {
+      "id": "T1114.001",
+      "is_subtechnique": true,
+      "name": "Local Email Collection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1114.002": {
+      "id": "T1114.002",
+      "is_subtechnique": true,
+      "name": "Remote Email Collection",
+      "platforms": [
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1114.003": {
+      "id": "T1114.003",
+      "is_subtechnique": true,
+      "name": "Email Forwarding Rule",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1115": {
+      "id": "T1115",
+      "is_subtechnique": false,
+      "name": "Clipboard Data",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1119": {
+      "id": "T1119",
+      "is_subtechnique": false,
+      "name": "Automated Collection",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1120": {
+      "id": "T1120",
+      "is_subtechnique": false,
+      "name": "Peripheral Device Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1123": {
+      "id": "T1123",
+      "is_subtechnique": false,
+      "name": "Audio Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1124": {
+      "id": "T1124",
+      "is_subtechnique": false,
+      "name": "System Time Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1125": {
+      "id": "T1125",
+      "is_subtechnique": false,
+      "name": "Video Capture",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1127": {
+      "id": "T1127",
+      "is_subtechnique": false,
+      "name": "Trusted Developer Utilities Proxy Execution",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1127.001": {
+      "id": "T1127.001",
+      "is_subtechnique": true,
+      "name": "MSBuild",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1127.002": {
+      "id": "T1127.002",
+      "is_subtechnique": true,
+      "name": "ClickOnce",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1127.003": {
+      "id": "T1127.003",
+      "is_subtechnique": true,
+      "name": "JamPlus",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1129": {
+      "id": "T1129",
+      "is_subtechnique": false,
+      "name": "Shared Modules",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1132": {
+      "id": "T1132",
+      "is_subtechnique": false,
+      "name": "Data Encoding",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1132.001": {
+      "id": "T1132.001",
+      "is_subtechnique": true,
+      "name": "Standard Encoding",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1132.002": {
+      "id": "T1132.002",
+      "is_subtechnique": true,
+      "name": "Non-Standard Encoding",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1133": {
+      "id": "T1133",
+      "is_subtechnique": false,
+      "name": "External Remote Services",
+      "platforms": [
+        "Containers",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "initial-access"
+      ]
+    },
+    "T1134": {
+      "id": "T1134",
+      "is_subtechnique": false,
+      "name": "Access Token Manipulation",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1134.001": {
+      "id": "T1134.001",
+      "is_subtechnique": true,
+      "name": "Token Impersonation/Theft",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1134.002": {
+      "id": "T1134.002",
+      "is_subtechnique": true,
+      "name": "Create Process with Token",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1134.003": {
+      "id": "T1134.003",
+      "is_subtechnique": true,
+      "name": "Make and Impersonate Token",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1134.004": {
+      "id": "T1134.004",
+      "is_subtechnique": true,
+      "name": "Parent PID Spoofing",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1134.005": {
+      "id": "T1134.005",
+      "is_subtechnique": true,
+      "name": "SID-History Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "privilege-escalation"
+      ]
+    },
+    "T1135": {
+      "id": "T1135",
+      "is_subtechnique": false,
+      "name": "Network Share Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1136": {
+      "id": "T1136",
+      "is_subtechnique": false,
+      "name": "Create Account",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Containers",
+        "SaaS",
+        "Office Suite",
+        "Identity Provider",
+        "ESXi"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1136.001": {
+      "id": "T1136.001",
+      "is_subtechnique": true,
+      "name": "Local Account",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1136.002": {
+      "id": "T1136.002",
+      "is_subtechnique": true,
+      "name": "Domain Account",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1136.003": {
+      "id": "T1136.003",
+      "is_subtechnique": true,
+      "name": "Cloud Account",
+      "platforms": [
+        "IaaS",
+        "SaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137": {
+      "id": "T1137",
+      "is_subtechnique": false,
+      "name": "Office Application Startup",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.001": {
+      "id": "T1137.001",
+      "is_subtechnique": true,
+      "name": "Office Template Macros",
+      "platforms": [
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.002": {
+      "id": "T1137.002",
+      "is_subtechnique": true,
+      "name": "Office Test",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.003": {
+      "id": "T1137.003",
+      "is_subtechnique": true,
+      "name": "Outlook Forms",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.004": {
+      "id": "T1137.004",
+      "is_subtechnique": true,
+      "name": "Outlook Home Page",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.005": {
+      "id": "T1137.005",
+      "is_subtechnique": true,
+      "name": "Outlook Rules",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1137.006": {
+      "id": "T1137.006",
+      "is_subtechnique": true,
+      "name": "Add-ins",
+      "platforms": [
+        "Windows",
+        "Office Suite"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1140": {
+      "id": "T1140",
+      "is_subtechnique": false,
+      "name": "Deobfuscate/Decode Files or Information",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1176": {
+      "id": "T1176",
+      "is_subtechnique": false,
+      "name": "Software Extensions",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1176.001": {
+      "id": "T1176.001",
+      "is_subtechnique": true,
+      "name": "Browser Extensions",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1176.002": {
+      "id": "T1176.002",
+      "is_subtechnique": true,
+      "name": "IDE Extensions",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1185": {
+      "id": "T1185",
+      "is_subtechnique": false,
+      "name": "Browser Session Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1187": {
+      "id": "T1187",
+      "is_subtechnique": false,
+      "name": "Forced Authentication",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1189": {
+      "id": "T1189",
+      "is_subtechnique": false,
+      "name": "Drive-by Compromise",
+      "platforms": [
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1190": {
+      "id": "T1190",
+      "is_subtechnique": false,
+      "name": "Exploit Public-Facing Application",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1195": {
+      "id": "T1195",
+      "is_subtechnique": false,
+      "name": "Supply Chain Compromise",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "SaaS"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1195.001": {
+      "id": "T1195.001",
+      "is_subtechnique": true,
+      "name": "Compromise Software Dependencies and Development Tools",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1195.002": {
+      "id": "T1195.002",
+      "is_subtechnique": true,
+      "name": "Compromise Software Supply Chain",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1195.003": {
+      "id": "T1195.003",
+      "is_subtechnique": true,
+      "name": "Compromise Hardware Supply Chain",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1197": {
+      "id": "T1197",
+      "is_subtechnique": false,
+      "name": "BITS Jobs",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "execution"
+      ]
+    },
+    "T1199": {
+      "id": "T1199",
+      "is_subtechnique": false,
+      "name": "Trusted Relationship",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1200": {
+      "id": "T1200",
+      "is_subtechnique": false,
+      "name": "Hardware Additions",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1201": {
+      "id": "T1201",
+      "is_subtechnique": false,
+      "name": "Password Policy Discovery",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "IaaS",
+        "Network Devices",
+        "Identity Provider",
+        "SaaS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1202": {
+      "id": "T1202",
+      "is_subtechnique": false,
+      "name": "Indirect Command Execution",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1203": {
+      "id": "T1203",
+      "is_subtechnique": false,
+      "name": "Exploitation for Client Execution",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204": {
+      "id": "T1204",
+      "is_subtechnique": false,
+      "name": "User Execution",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "IaaS",
+        "Containers"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204.001": {
+      "id": "T1204.001",
+      "is_subtechnique": true,
+      "name": "Malicious Link",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204.002": {
+      "id": "T1204.002",
+      "is_subtechnique": true,
+      "name": "Malicious File",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204.003": {
+      "id": "T1204.003",
+      "is_subtechnique": true,
+      "name": "Malicious Image",
+      "platforms": [
+        "IaaS",
+        "Containers"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204.004": {
+      "id": "T1204.004",
+      "is_subtechnique": true,
+      "name": "Malicious Copy and Paste",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1204.005": {
+      "id": "T1204.005",
+      "is_subtechnique": true,
+      "name": "Malicious Library",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1205": {
+      "id": "T1205",
+      "is_subtechnique": false,
+      "name": "Traffic Signaling",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "command-and-control"
+      ]
+    },
+    "T1205.001": {
+      "id": "T1205.001",
+      "is_subtechnique": true,
+      "name": "Port Knocking",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "command-and-control"
+      ]
+    },
+    "T1205.002": {
+      "id": "T1205.002",
+      "is_subtechnique": true,
+      "name": "Socket Filters",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence",
+        "command-and-control"
+      ]
+    },
+    "T1207": {
+      "id": "T1207",
+      "is_subtechnique": false,
+      "name": "Rogue Domain Controller",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1210": {
+      "id": "T1210",
+      "is_subtechnique": false,
+      "name": "Exploitation of Remote Services",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "ESXi"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1211": {
+      "id": "T1211",
+      "is_subtechnique": false,
+      "name": "Exploitation for Stealth",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "SaaS",
+        "IaaS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1212": {
+      "id": "T1212",
+      "is_subtechnique": false,
+      "name": "Exploitation for Credential Access",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1213": {
+      "id": "T1213",
+      "is_subtechnique": false,
+      "name": "Data from Information Repositories",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "SaaS",
+        "IaaS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.001": {
+      "id": "T1213.001",
+      "is_subtechnique": true,
+      "name": "Confluence",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.002": {
+      "id": "T1213.002",
+      "is_subtechnique": true,
+      "name": "Sharepoint",
+      "platforms": [
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.003": {
+      "id": "T1213.003",
+      "is_subtechnique": true,
+      "name": "Code Repositories",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.004": {
+      "id": "T1213.004",
+      "is_subtechnique": true,
+      "name": "Customer Relationship Management Software",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.005": {
+      "id": "T1213.005",
+      "is_subtechnique": true,
+      "name": "Messaging Applications",
+      "platforms": [
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1213.006": {
+      "id": "T1213.006",
+      "is_subtechnique": true,
+      "name": "Databases",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1216": {
+      "id": "T1216",
+      "is_subtechnique": false,
+      "name": "System Script Proxy Execution",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1216.001": {
+      "id": "T1216.001",
+      "is_subtechnique": true,
+      "name": "PubPrn",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1216.002": {
+      "id": "T1216.002",
+      "is_subtechnique": true,
+      "name": "SyncAppvPublishingServer",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1217": {
+      "id": "T1217",
+      "is_subtechnique": false,
+      "name": "Browser Information Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1218": {
+      "id": "T1218",
+      "is_subtechnique": false,
+      "name": "System Binary Proxy Execution",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.001": {
+      "id": "T1218.001",
+      "is_subtechnique": true,
+      "name": "Compiled HTML File",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.002": {
+      "id": "T1218.002",
+      "is_subtechnique": true,
+      "name": "Control Panel",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.003": {
+      "id": "T1218.003",
+      "is_subtechnique": true,
+      "name": "CMSTP",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.004": {
+      "id": "T1218.004",
+      "is_subtechnique": true,
+      "name": "InstallUtil",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.005": {
+      "id": "T1218.005",
+      "is_subtechnique": true,
+      "name": "Mshta",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.007": {
+      "id": "T1218.007",
+      "is_subtechnique": true,
+      "name": "Msiexec",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.008": {
+      "id": "T1218.008",
+      "is_subtechnique": true,
+      "name": "Odbcconf",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.009": {
+      "id": "T1218.009",
+      "is_subtechnique": true,
+      "name": "Regsvcs/Regasm",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.010": {
+      "id": "T1218.010",
+      "is_subtechnique": true,
+      "name": "Regsvr32",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.011": {
+      "id": "T1218.011",
+      "is_subtechnique": true,
+      "name": "Rundll32",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.012": {
+      "id": "T1218.012",
+      "is_subtechnique": true,
+      "name": "Verclsid",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.013": {
+      "id": "T1218.013",
+      "is_subtechnique": true,
+      "name": "Mavinject",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.014": {
+      "id": "T1218.014",
+      "is_subtechnique": true,
+      "name": "MMC",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1218.015": {
+      "id": "T1218.015",
+      "is_subtechnique": true,
+      "name": "Electron Applications",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1219": {
+      "id": "T1219",
+      "is_subtechnique": false,
+      "name": "Remote Access Tools",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1219.001": {
+      "id": "T1219.001",
+      "is_subtechnique": true,
+      "name": "IDE Tunneling",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1219.002": {
+      "id": "T1219.002",
+      "is_subtechnique": true,
+      "name": "Remote Desktop Software",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1219.003": {
+      "id": "T1219.003",
+      "is_subtechnique": true,
+      "name": "Remote Access Hardware",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1220": {
+      "id": "T1220",
+      "is_subtechnique": false,
+      "name": "XSL Script Processing",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1221": {
+      "id": "T1221",
+      "is_subtechnique": false,
+      "name": "Template Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1222": {
+      "id": "T1222",
+      "is_subtechnique": false,
+      "name": "File and Directory Permissions Modification",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1222.001": {
+      "id": "T1222.001",
+      "is_subtechnique": true,
+      "name": "Windows Permissions",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1222.002": {
+      "id": "T1222.002",
+      "is_subtechnique": true,
+      "name": "Linux and Mac Permissions",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1480": {
+      "id": "T1480",
+      "is_subtechnique": false,
+      "name": "Execution Guardrails",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1480.001": {
+      "id": "T1480.001",
+      "is_subtechnique": true,
+      "name": "Environmental Keying",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1480.002": {
+      "id": "T1480.002",
+      "is_subtechnique": true,
+      "name": "Mutual Exclusion",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1482": {
+      "id": "T1482",
+      "is_subtechnique": false,
+      "name": "Domain Trust Discovery",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1484": {
+      "id": "T1484",
+      "is_subtechnique": false,
+      "name": "Domain or Tenant Policy Modification",
+      "platforms": [
+        "Windows",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "privilege-escalation"
+      ]
+    },
+    "T1484.001": {
+      "id": "T1484.001",
+      "is_subtechnique": true,
+      "name": "Group Policy Modification",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "privilege-escalation"
+      ]
+    },
+    "T1484.002": {
+      "id": "T1484.002",
+      "is_subtechnique": true,
+      "name": "Trust Modification",
+      "platforms": [
+        "Identity Provider",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "privilege-escalation"
+      ]
+    },
+    "T1485": {
+      "id": "T1485",
+      "is_subtechnique": false,
+      "name": "Data Destruction",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1485.001": {
+      "id": "T1485.001",
+      "is_subtechnique": true,
+      "name": "Lifecycle-Triggered Deletion",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1486": {
+      "id": "T1486",
+      "is_subtechnique": false,
+      "name": "Data Encrypted for Impact",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1489": {
+      "id": "T1489",
+      "is_subtechnique": false,
+      "name": "Service Stop",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1490": {
+      "id": "T1490",
+      "is_subtechnique": false,
+      "name": "Inhibit System Recovery",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1491": {
+      "id": "T1491",
+      "is_subtechnique": false,
+      "name": "Defacement",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "ESXi"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1491.001": {
+      "id": "T1491.001",
+      "is_subtechnique": true,
+      "name": "Internal Defacement",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1491.002": {
+      "id": "T1491.002",
+      "is_subtechnique": true,
+      "name": "External Defacement",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1495": {
+      "id": "T1495",
+      "is_subtechnique": false,
+      "name": "Firmware Corruption",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1496": {
+      "id": "T1496",
+      "is_subtechnique": false,
+      "name": "Resource Hijacking",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Containers",
+        "SaaS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1496.001": {
+      "id": "T1496.001",
+      "is_subtechnique": true,
+      "name": "Compute Hijacking",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Containers"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1496.002": {
+      "id": "T1496.002",
+      "is_subtechnique": true,
+      "name": "Bandwidth Hijacking",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "IaaS",
+        "Containers"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1496.003": {
+      "id": "T1496.003",
+      "is_subtechnique": true,
+      "name": "SMS Pumping",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1496.004": {
+      "id": "T1496.004",
+      "is_subtechnique": true,
+      "name": "Cloud Service Hijacking",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1497": {
+      "id": "T1497",
+      "is_subtechnique": false,
+      "name": "Virtualization/Sandbox Evasion",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "discovery"
+      ]
+    },
+    "T1497.001": {
+      "id": "T1497.001",
+      "is_subtechnique": true,
+      "name": "System Checks",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "discovery"
+      ]
+    },
+    "T1497.002": {
+      "id": "T1497.002",
+      "is_subtechnique": true,
+      "name": "User Activity Based Checks",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "discovery"
+      ]
+    },
+    "T1497.003": {
+      "id": "T1497.003",
+      "is_subtechnique": true,
+      "name": "Time Based Checks",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "discovery"
+      ]
+    },
+    "T1498": {
+      "id": "T1498",
+      "is_subtechnique": false,
+      "name": "Network Denial of Service",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Containers"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1498.001": {
+      "id": "T1498.001",
+      "is_subtechnique": true,
+      "name": "Direct Network Flood",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1498.002": {
+      "id": "T1498.002",
+      "is_subtechnique": true,
+      "name": "Reflection Amplification",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1499": {
+      "id": "T1499",
+      "is_subtechnique": false,
+      "name": "Endpoint Denial of Service",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Containers",
+        "IaaS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1499.001": {
+      "id": "T1499.001",
+      "is_subtechnique": true,
+      "name": "OS Exhaustion Flood",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1499.002": {
+      "id": "T1499.002",
+      "is_subtechnique": true,
+      "name": "Service Exhaustion Flood",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1499.003": {
+      "id": "T1499.003",
+      "is_subtechnique": true,
+      "name": "Application Exhaustion Flood",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1499.004": {
+      "id": "T1499.004",
+      "is_subtechnique": true,
+      "name": "Application or System Exploitation",
+      "platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1505": {
+      "id": "T1505",
+      "is_subtechnique": false,
+      "name": "Server Software Component",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "ESXi"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.001": {
+      "id": "T1505.001",
+      "is_subtechnique": true,
+      "name": "SQL Stored Procedures",
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.002": {
+      "id": "T1505.002",
+      "is_subtechnique": true,
+      "name": "Transport Agent",
+      "platforms": [
+        "Linux",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.003": {
+      "id": "T1505.003",
+      "is_subtechnique": true,
+      "name": "Web Shell",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.004": {
+      "id": "T1505.004",
+      "is_subtechnique": true,
+      "name": "IIS Components",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.005": {
+      "id": "T1505.005",
+      "is_subtechnique": true,
+      "name": "Terminal Services DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1505.006": {
+      "id": "T1505.006",
+      "is_subtechnique": true,
+      "name": "vSphere Installation Bundles",
+      "platforms": [
+        "ESXi"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1518": {
+      "id": "T1518",
+      "is_subtechnique": false,
+      "name": "Software Discovery",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1518.001": {
+      "id": "T1518.001",
+      "is_subtechnique": true,
+      "name": "Security Software Discovery",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1518.002": {
+      "id": "T1518.002",
+      "is_subtechnique": true,
+      "name": "Backup Software Discovery",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1525": {
+      "id": "T1525",
+      "is_subtechnique": false,
+      "name": "Implant Internal Image",
+      "platforms": [
+        "IaaS",
+        "Containers"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1526": {
+      "id": "T1526",
+      "is_subtechnique": false,
+      "name": "Cloud Service Discovery",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1528": {
+      "id": "T1528",
+      "is_subtechnique": false,
+      "name": "Steal Application Access Token",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1529": {
+      "id": "T1529",
+      "is_subtechnique": false,
+      "name": "System Shutdown/Reboot",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1530": {
+      "id": "T1530",
+      "is_subtechnique": false,
+      "name": "Data from Cloud Storage",
+      "platforms": [
+        "IaaS",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1531": {
+      "id": "T1531",
+      "is_subtechnique": false,
+      "name": "Account Access Removal",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "SaaS",
+        "IaaS",
+        "Office Suite",
+        "ESXi"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1534": {
+      "id": "T1534",
+      "is_subtechnique": false,
+      "name": "Internal Spearphishing",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1535": {
+      "id": "T1535",
+      "is_subtechnique": false,
+      "name": "Unused/Unsupported Cloud Regions",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1537": {
+      "id": "T1537",
+      "is_subtechnique": false,
+      "name": "Transfer Data to Cloud Account",
+      "platforms": [
+        "IaaS",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1538": {
+      "id": "T1538",
+      "is_subtechnique": false,
+      "name": "Cloud Service Dashboard",
+      "platforms": [
+        "IaaS",
+        "SaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1539": {
+      "id": "T1539",
+      "is_subtechnique": false,
+      "name": "Steal Web Session Cookie",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1542": {
+      "id": "T1542",
+      "is_subtechnique": false,
+      "name": "Pre-OS Boot",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1542.001": {
+      "id": "T1542.001",
+      "is_subtechnique": true,
+      "name": "System Firmware",
+      "platforms": [
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1542.002": {
+      "id": "T1542.002",
+      "is_subtechnique": true,
+      "name": "Component Firmware",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1542.003": {
+      "id": "T1542.003",
+      "is_subtechnique": true,
+      "name": "Bootkit",
+      "platforms": [
+        "Linux",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1542.004": {
+      "id": "T1542.004",
+      "is_subtechnique": true,
+      "name": "ROMMONkit",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1542.005": {
+      "id": "T1542.005",
+      "is_subtechnique": true,
+      "name": "TFTP Boot",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "stealth",
+        "persistence"
+      ]
+    },
+    "T1543": {
+      "id": "T1543",
+      "is_subtechnique": false,
+      "name": "Create or Modify System Process",
+      "platforms": [
+        "Containers",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1543.001": {
+      "id": "T1543.001",
+      "is_subtechnique": true,
+      "name": "Launch Agent",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1543.002": {
+      "id": "T1543.002",
+      "is_subtechnique": true,
+      "name": "Systemd Service",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1543.003": {
+      "id": "T1543.003",
+      "is_subtechnique": true,
+      "name": "Windows Service",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1543.004": {
+      "id": "T1543.004",
+      "is_subtechnique": true,
+      "name": "Launch Daemon",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1543.005": {
+      "id": "T1543.005",
+      "is_subtechnique": true,
+      "name": "Container Service",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1546": {
+      "id": "T1546",
+      "is_subtechnique": false,
+      "name": "Event Triggered Execution",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "SaaS",
+        "IaaS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.001": {
+      "id": "T1546.001",
+      "is_subtechnique": true,
+      "name": "Change Default File Association",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.002": {
+      "id": "T1546.002",
+      "is_subtechnique": true,
+      "name": "Screensaver",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.003": {
+      "id": "T1546.003",
+      "is_subtechnique": true,
+      "name": "Windows Management Instrumentation Event Subscription",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.004": {
+      "id": "T1546.004",
+      "is_subtechnique": true,
+      "name": "Unix Shell Configuration Modification",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.005": {
+      "id": "T1546.005",
+      "is_subtechnique": true,
+      "name": "Trap",
+      "platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.006": {
+      "id": "T1546.006",
+      "is_subtechnique": true,
+      "name": "LC_LOAD_DYLIB Addition",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.007": {
+      "id": "T1546.007",
+      "is_subtechnique": true,
+      "name": "Netsh Helper DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.008": {
+      "id": "T1546.008",
+      "is_subtechnique": true,
+      "name": "Accessibility Features",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.009": {
+      "id": "T1546.009",
+      "is_subtechnique": true,
+      "name": "AppCert DLLs",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.010": {
+      "id": "T1546.010",
+      "is_subtechnique": true,
+      "name": "AppInit DLLs",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.011": {
+      "id": "T1546.011",
+      "is_subtechnique": true,
+      "name": "Application Shimming",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.012": {
+      "id": "T1546.012",
+      "is_subtechnique": true,
+      "name": "Image File Execution Options Injection",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.013": {
+      "id": "T1546.013",
+      "is_subtechnique": true,
+      "name": "PowerShell Profile",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.014": {
+      "id": "T1546.014",
+      "is_subtechnique": true,
+      "name": "Emond",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.015": {
+      "id": "T1546.015",
+      "is_subtechnique": true,
+      "name": "Component Object Model Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.016": {
+      "id": "T1546.016",
+      "is_subtechnique": true,
+      "name": "Installer Packages",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    "T1546.017": {
+      "id": "T1546.017",
+      "is_subtechnique": true,
+      "name": "Udev Rules",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1546.018": {
+      "id": "T1546.018",
+      "is_subtechnique": true,
+      "name": "Python Startup Hooks",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547": {
+      "id": "T1547",
+      "is_subtechnique": false,
+      "name": "Boot or Logon Autostart Execution",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Network Devices"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.001": {
+      "id": "T1547.001",
+      "is_subtechnique": true,
+      "name": "Registry Run Keys / Startup Folder",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.002": {
+      "id": "T1547.002",
+      "is_subtechnique": true,
+      "name": "Authentication Package",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.003": {
+      "id": "T1547.003",
+      "is_subtechnique": true,
+      "name": "Time Providers",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.004": {
+      "id": "T1547.004",
+      "is_subtechnique": true,
+      "name": "Winlogon Helper DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.005": {
+      "id": "T1547.005",
+      "is_subtechnique": true,
+      "name": "Security Support Provider",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.006": {
+      "id": "T1547.006",
+      "is_subtechnique": true,
+      "name": "Kernel Modules and Extensions",
+      "platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.007": {
+      "id": "T1547.007",
+      "is_subtechnique": true,
+      "name": "Re-opened Applications",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.008": {
+      "id": "T1547.008",
+      "is_subtechnique": true,
+      "name": "LSASS Driver",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.009": {
+      "id": "T1547.009",
+      "is_subtechnique": true,
+      "name": "Shortcut Modification",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.010": {
+      "id": "T1547.010",
+      "is_subtechnique": true,
+      "name": "Port Monitors",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.012": {
+      "id": "T1547.012",
+      "is_subtechnique": true,
+      "name": "Print Processors",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.013": {
+      "id": "T1547.013",
+      "is_subtechnique": true,
+      "name": "XDG Autostart Entries",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.014": {
+      "id": "T1547.014",
+      "is_subtechnique": true,
+      "name": "Active Setup",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1547.015": {
+      "id": "T1547.015",
+      "is_subtechnique": true,
+      "name": "Login Items",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "persistence",
+        "privilege-escalation"
+      ]
+    },
+    "T1548": {
+      "id": "T1548",
+      "is_subtechnique": false,
+      "name": "Abuse Elevation Control Mechanism",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "IaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.001": {
+      "id": "T1548.001",
+      "is_subtechnique": true,
+      "name": "Setuid and Setgid",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.002": {
+      "id": "T1548.002",
+      "is_subtechnique": true,
+      "name": "Bypass User Account Control",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.003": {
+      "id": "T1548.003",
+      "is_subtechnique": true,
+      "name": "Sudo and Sudo Caching",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.004": {
+      "id": "T1548.004",
+      "is_subtechnique": true,
+      "name": "Elevated Execution with Prompt",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.005": {
+      "id": "T1548.005",
+      "is_subtechnique": true,
+      "name": "Temporary Elevated Cloud Access",
+      "platforms": [
+        "IaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1548.006": {
+      "id": "T1548.006",
+      "is_subtechnique": true,
+      "name": "TCC Manipulation",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1550": {
+      "id": "T1550",
+      "is_subtechnique": false,
+      "name": "Use Alternate Authentication Material",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1550.001": {
+      "id": "T1550.001",
+      "is_subtechnique": true,
+      "name": "Application Access Token",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1550.002": {
+      "id": "T1550.002",
+      "is_subtechnique": true,
+      "name": "Pass the Hash",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1550.003": {
+      "id": "T1550.003",
+      "is_subtechnique": true,
+      "name": "Pass the Ticket",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1550.004": {
+      "id": "T1550.004",
+      "is_subtechnique": true,
+      "name": "Web Session Cookie",
+      "platforms": [
+        "IaaS",
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1552": {
+      "id": "T1552",
+      "is_subtechnique": false,
+      "name": "Unsecured Credentials",
+      "platforms": [
+        "Windows",
+        "SaaS",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Containers",
+        "Network Devices",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.001": {
+      "id": "T1552.001",
+      "is_subtechnique": true,
+      "name": "Credentials In Files",
+      "platforms": [
+        "Containers",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.002": {
+      "id": "T1552.002",
+      "is_subtechnique": true,
+      "name": "Credentials in Registry",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.003": {
+      "id": "T1552.003",
+      "is_subtechnique": true,
+      "name": "Shell History",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.004": {
+      "id": "T1552.004",
+      "is_subtechnique": true,
+      "name": "Private Keys",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.005": {
+      "id": "T1552.005",
+      "is_subtechnique": true,
+      "name": "Cloud Instance Metadata API",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.006": {
+      "id": "T1552.006",
+      "is_subtechnique": true,
+      "name": "Group Policy Preferences",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.007": {
+      "id": "T1552.007",
+      "is_subtechnique": true,
+      "name": "Container API",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1552.008": {
+      "id": "T1552.008",
+      "is_subtechnique": true,
+      "name": "Chat Messages",
+      "platforms": [
+        "SaaS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1553": {
+      "id": "T1553",
+      "is_subtechnique": false,
+      "name": "Subvert Trust Controls",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.001": {
+      "id": "T1553.001",
+      "is_subtechnique": true,
+      "name": "Gatekeeper Bypass",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.002": {
+      "id": "T1553.002",
+      "is_subtechnique": true,
+      "name": "Code Signing",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.003": {
+      "id": "T1553.003",
+      "is_subtechnique": true,
+      "name": "SIP and Trust Provider Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.004": {
+      "id": "T1553.004",
+      "is_subtechnique": true,
+      "name": "Install Root Certificate",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.005": {
+      "id": "T1553.005",
+      "is_subtechnique": true,
+      "name": "Mark-of-the-Web Bypass",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1553.006": {
+      "id": "T1553.006",
+      "is_subtechnique": true,
+      "name": "Code Signing Policy Modification",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1554": {
+      "id": "T1554",
+      "is_subtechnique": false,
+      "name": "Compromise Host Software Binary",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1555": {
+      "id": "T1555",
+      "is_subtechnique": false,
+      "name": "Credentials from Password Stores",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.001": {
+      "id": "T1555.001",
+      "is_subtechnique": true,
+      "name": "Keychain",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.002": {
+      "id": "T1555.002",
+      "is_subtechnique": true,
+      "name": "Securityd Memory",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.003": {
+      "id": "T1555.003",
+      "is_subtechnique": true,
+      "name": "Credentials from Web Browsers",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.004": {
+      "id": "T1555.004",
+      "is_subtechnique": true,
+      "name": "Windows Credential Manager",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.005": {
+      "id": "T1555.005",
+      "is_subtechnique": true,
+      "name": "Password Managers",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1555.006": {
+      "id": "T1555.006",
+      "is_subtechnique": true,
+      "name": "Cloud Secrets Management Stores",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1556": {
+      "id": "T1556",
+      "is_subtechnique": false,
+      "name": "Modify Authentication Process",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.001": {
+      "id": "T1556.001",
+      "is_subtechnique": true,
+      "name": "Domain Controller Authentication",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.002": {
+      "id": "T1556.002",
+      "is_subtechnique": true,
+      "name": "Password Filter DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.003": {
+      "id": "T1556.003",
+      "is_subtechnique": true,
+      "name": "Pluggable Authentication Modules",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.004": {
+      "id": "T1556.004",
+      "is_subtechnique": true,
+      "name": "Network Device Authentication",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.005": {
+      "id": "T1556.005",
+      "is_subtechnique": true,
+      "name": "Reversible Encryption",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.006": {
+      "id": "T1556.006",
+      "is_subtechnique": true,
+      "name": "Multi-Factor Authentication",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.007": {
+      "id": "T1556.007",
+      "is_subtechnique": true,
+      "name": "Hybrid Identity",
+      "platforms": [
+        "IaaS",
+        "Identity Provider",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.008": {
+      "id": "T1556.008",
+      "is_subtechnique": true,
+      "name": "Network Provider DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1556.009": {
+      "id": "T1556.009",
+      "is_subtechnique": true,
+      "name": "Conditional Access Policies",
+      "platforms": [
+        "IaaS",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "defense-impairment",
+        "persistence",
+        "credential-access"
+      ]
+    },
+    "T1557": {
+      "id": "T1557",
+      "is_subtechnique": false,
+      "name": "Adversary-in-the-Middle",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access",
+        "collection"
+      ]
+    },
+    "T1557.001": {
+      "id": "T1557.001",
+      "is_subtechnique": true,
+      "name": "Name Resolution Poisoning and SMB Relay",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access",
+        "collection"
+      ]
+    },
+    "T1557.002": {
+      "id": "T1557.002",
+      "is_subtechnique": true,
+      "name": "ARP Cache Poisoning",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access",
+        "collection"
+      ]
+    },
+    "T1557.003": {
+      "id": "T1557.003",
+      "is_subtechnique": true,
+      "name": "DHCP Spoofing",
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access",
+        "collection"
+      ]
+    },
+    "T1557.004": {
+      "id": "T1557.004",
+      "is_subtechnique": true,
+      "name": "Evil Twin",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "credential-access",
+        "collection"
+      ]
+    },
+    "T1558": {
+      "id": "T1558",
+      "is_subtechnique": false,
+      "name": "Steal or Forge Kerberos Tickets",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1558.001": {
+      "id": "T1558.001",
+      "is_subtechnique": true,
+      "name": "Golden Ticket",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1558.002": {
+      "id": "T1558.002",
+      "is_subtechnique": true,
+      "name": "Silver Ticket",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1558.003": {
+      "id": "T1558.003",
+      "is_subtechnique": true,
+      "name": "Kerberoasting",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1558.004": {
+      "id": "T1558.004",
+      "is_subtechnique": true,
+      "name": "AS-REP Roasting",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1558.005": {
+      "id": "T1558.005",
+      "is_subtechnique": true,
+      "name": "Ccache Files",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1559": {
+      "id": "T1559",
+      "is_subtechnique": false,
+      "name": "Inter-Process Communication",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1559.001": {
+      "id": "T1559.001",
+      "is_subtechnique": true,
+      "name": "Component Object Model",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1559.002": {
+      "id": "T1559.002",
+      "is_subtechnique": true,
+      "name": "Dynamic Data Exchange",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1559.003": {
+      "id": "T1559.003",
+      "is_subtechnique": true,
+      "name": "XPC Services",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1560": {
+      "id": "T1560",
+      "is_subtechnique": false,
+      "name": "Archive Collected Data",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1560.001": {
+      "id": "T1560.001",
+      "is_subtechnique": true,
+      "name": "Archive via Utility",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1560.002": {
+      "id": "T1560.002",
+      "is_subtechnique": true,
+      "name": "Archive via Library",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1560.003": {
+      "id": "T1560.003",
+      "is_subtechnique": true,
+      "name": "Archive via Custom Method",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1561": {
+      "id": "T1561",
+      "is_subtechnique": false,
+      "name": "Disk Wipe",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Network Devices"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1561.001": {
+      "id": "T1561.001",
+      "is_subtechnique": true,
+      "name": "Disk Content Wipe",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1561.002": {
+      "id": "T1561.002",
+      "is_subtechnique": true,
+      "name": "Disk Structure Wipe",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1563": {
+      "id": "T1563",
+      "is_subtechnique": false,
+      "name": "Remote Service Session Hijacking",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1563.001": {
+      "id": "T1563.001",
+      "is_subtechnique": true,
+      "name": "SSH Hijacking",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1563.002": {
+      "id": "T1563.002",
+      "is_subtechnique": true,
+      "name": "RDP Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1564": {
+      "id": "T1564",
+      "is_subtechnique": false,
+      "name": "Hide Artifacts",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.001": {
+      "id": "T1564.001",
+      "is_subtechnique": true,
+      "name": "Hidden Files and Directories",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.002": {
+      "id": "T1564.002",
+      "is_subtechnique": true,
+      "name": "Hidden Users",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.003": {
+      "id": "T1564.003",
+      "is_subtechnique": true,
+      "name": "Hidden Window",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.004": {
+      "id": "T1564.004",
+      "is_subtechnique": true,
+      "name": "NTFS File Attributes",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.005": {
+      "id": "T1564.005",
+      "is_subtechnique": true,
+      "name": "Hidden File System",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.006": {
+      "id": "T1564.006",
+      "is_subtechnique": true,
+      "name": "Run Virtual Instance",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.007": {
+      "id": "T1564.007",
+      "is_subtechnique": true,
+      "name": "VBA Stomping",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.008": {
+      "id": "T1564.008",
+      "is_subtechnique": true,
+      "name": "Email Hiding Rules",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.009": {
+      "id": "T1564.009",
+      "is_subtechnique": true,
+      "name": "Resource Forking",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.010": {
+      "id": "T1564.010",
+      "is_subtechnique": true,
+      "name": "Process Argument Spoofing",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.011": {
+      "id": "T1564.011",
+      "is_subtechnique": true,
+      "name": "Ignore Process Interrupts",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.012": {
+      "id": "T1564.012",
+      "is_subtechnique": true,
+      "name": "File/Path Exclusions",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.013": {
+      "id": "T1564.013",
+      "is_subtechnique": true,
+      "name": "Bind Mounts",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1564.014": {
+      "id": "T1564.014",
+      "is_subtechnique": true,
+      "name": "Extended Attributes",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1565": {
+      "id": "T1565",
+      "is_subtechnique": false,
+      "name": "Data Manipulation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1565.001": {
+      "id": "T1565.001",
+      "is_subtechnique": true,
+      "name": "Stored Data Manipulation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1565.002": {
+      "id": "T1565.002",
+      "is_subtechnique": true,
+      "name": "Transmitted Data Manipulation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1565.003": {
+      "id": "T1565.003",
+      "is_subtechnique": true,
+      "name": "Runtime Data Manipulation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1566": {
+      "id": "T1566",
+      "is_subtechnique": false,
+      "name": "Phishing",
+      "platforms": [
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1566.001": {
+      "id": "T1566.001",
+      "is_subtechnique": true,
+      "name": "Spearphishing Attachment",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1566.002": {
+      "id": "T1566.002",
+      "is_subtechnique": true,
+      "name": "Spearphishing Link",
+      "platforms": [
+        "Identity Provider",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1566.003": {
+      "id": "T1566.003",
+      "is_subtechnique": true,
+      "name": "Spearphishing via Service",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1566.004": {
+      "id": "T1566.004",
+      "is_subtechnique": true,
+      "name": "Spearphishing Voice",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1567": {
+      "id": "T1567",
+      "is_subtechnique": false,
+      "name": "Exfiltration Over Web Service",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1567.001": {
+      "id": "T1567.001",
+      "is_subtechnique": true,
+      "name": "Exfiltration to Code Repository",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1567.002": {
+      "id": "T1567.002",
+      "is_subtechnique": true,
+      "name": "Exfiltration to Cloud Storage",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1567.003": {
+      "id": "T1567.003",
+      "is_subtechnique": true,
+      "name": "Exfiltration to Text Storage Sites",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1567.004": {
+      "id": "T1567.004",
+      "is_subtechnique": true,
+      "name": "Exfiltration Over Webhook",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "exfiltration"
+      ]
+    },
+    "T1568": {
+      "id": "T1568",
+      "is_subtechnique": false,
+      "name": "Dynamic Resolution",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1568.001": {
+      "id": "T1568.001",
+      "is_subtechnique": true,
+      "name": "Fast Flux DNS",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "ESXi"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1568.002": {
+      "id": "T1568.002",
+      "is_subtechnique": true,
+      "name": "Domain Generation Algorithms",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1568.003": {
+      "id": "T1568.003",
+      "is_subtechnique": true,
+      "name": "DNS Calculation",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1569": {
+      "id": "T1569",
+      "is_subtechnique": false,
+      "name": "System Services",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1569.001": {
+      "id": "T1569.001",
+      "is_subtechnique": true,
+      "name": "Launchctl",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1569.002": {
+      "id": "T1569.002",
+      "is_subtechnique": true,
+      "name": "Service Execution",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1569.003": {
+      "id": "T1569.003",
+      "is_subtechnique": true,
+      "name": "Systemctl",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1570": {
+      "id": "T1570",
+      "is_subtechnique": false,
+      "name": "Lateral Tool Transfer",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "lateral-movement"
+      ]
+    },
+    "T1571": {
+      "id": "T1571",
+      "is_subtechnique": false,
+      "name": "Non-Standard Port",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1572": {
+      "id": "T1572",
+      "is_subtechnique": false,
+      "name": "Protocol Tunneling",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1573": {
+      "id": "T1573",
+      "is_subtechnique": false,
+      "name": "Encrypted Channel",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1573.001": {
+      "id": "T1573.001",
+      "is_subtechnique": true,
+      "name": "Symmetric Cryptography",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1573.002": {
+      "id": "T1573.002",
+      "is_subtechnique": true,
+      "name": "Asymmetric Cryptography",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1574": {
+      "id": "T1574",
+      "is_subtechnique": false,
+      "name": "Hijack Execution Flow",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.001": {
+      "id": "T1574.001",
+      "is_subtechnique": true,
+      "name": "DLL",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.004": {
+      "id": "T1574.004",
+      "is_subtechnique": true,
+      "name": "Dylib Hijacking",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.005": {
+      "id": "T1574.005",
+      "is_subtechnique": true,
+      "name": "Executable Installer File Permissions Weakness",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.006": {
+      "id": "T1574.006",
+      "is_subtechnique": true,
+      "name": "Dynamic Linker Hijacking",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.007": {
+      "id": "T1574.007",
+      "is_subtechnique": true,
+      "name": "Path Interception by PATH Environment Variable",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.008": {
+      "id": "T1574.008",
+      "is_subtechnique": true,
+      "name": "Path Interception by Search Order Hijacking",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.009": {
+      "id": "T1574.009",
+      "is_subtechnique": true,
+      "name": "Path Interception by Unquoted Path",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.010": {
+      "id": "T1574.010",
+      "is_subtechnique": true,
+      "name": "Services File Permissions Weakness",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.011": {
+      "id": "T1574.011",
+      "is_subtechnique": true,
+      "name": "Services Registry Permissions Weakness",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.012": {
+      "id": "T1574.012",
+      "is_subtechnique": true,
+      "name": "COR_PROFILER",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.013": {
+      "id": "T1574.013",
+      "is_subtechnique": true,
+      "name": "KernelCallbackTable",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1574.014": {
+      "id": "T1574.014",
+      "is_subtechnique": true,
+      "name": "AppDomainManager",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "execution"
+      ]
+    },
+    "T1578": {
+      "id": "T1578",
+      "is_subtechnique": false,
+      "name": "Modify Cloud Compute Infrastructure",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1578.001": {
+      "id": "T1578.001",
+      "is_subtechnique": true,
+      "name": "Create Snapshot",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1578.002": {
+      "id": "T1578.002",
+      "is_subtechnique": true,
+      "name": "Create Cloud Instance",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1578.003": {
+      "id": "T1578.003",
+      "is_subtechnique": true,
+      "name": "Delete Cloud Instance",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1578.004": {
+      "id": "T1578.004",
+      "is_subtechnique": true,
+      "name": "Revert Cloud Instance",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1578.005": {
+      "id": "T1578.005",
+      "is_subtechnique": true,
+      "name": "Modify Cloud Compute Configurations",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1580": {
+      "id": "T1580",
+      "is_subtechnique": false,
+      "name": "Cloud Infrastructure Discovery",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1583": {
+      "id": "T1583",
+      "is_subtechnique": false,
+      "name": "Acquire Infrastructure",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.001": {
+      "id": "T1583.001",
+      "is_subtechnique": true,
+      "name": "Domains",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.002": {
+      "id": "T1583.002",
+      "is_subtechnique": true,
+      "name": "DNS Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.003": {
+      "id": "T1583.003",
+      "is_subtechnique": true,
+      "name": "Virtual Private Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.004": {
+      "id": "T1583.004",
+      "is_subtechnique": true,
+      "name": "Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.005": {
+      "id": "T1583.005",
+      "is_subtechnique": true,
+      "name": "Botnet",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.006": {
+      "id": "T1583.006",
+      "is_subtechnique": true,
+      "name": "Web Services",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.007": {
+      "id": "T1583.007",
+      "is_subtechnique": true,
+      "name": "Serverless",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1583.008": {
+      "id": "T1583.008",
+      "is_subtechnique": true,
+      "name": "Malvertising",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584": {
+      "id": "T1584",
+      "is_subtechnique": false,
+      "name": "Compromise Infrastructure",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.001": {
+      "id": "T1584.001",
+      "is_subtechnique": true,
+      "name": "Domains",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.002": {
+      "id": "T1584.002",
+      "is_subtechnique": true,
+      "name": "DNS Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.003": {
+      "id": "T1584.003",
+      "is_subtechnique": true,
+      "name": "Virtual Private Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.004": {
+      "id": "T1584.004",
+      "is_subtechnique": true,
+      "name": "Server",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.005": {
+      "id": "T1584.005",
+      "is_subtechnique": true,
+      "name": "Botnet",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.006": {
+      "id": "T1584.006",
+      "is_subtechnique": true,
+      "name": "Web Services",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.007": {
+      "id": "T1584.007",
+      "is_subtechnique": true,
+      "name": "Serverless",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1584.008": {
+      "id": "T1584.008",
+      "is_subtechnique": true,
+      "name": "Network Devices",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1585": {
+      "id": "T1585",
+      "is_subtechnique": false,
+      "name": "Establish Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1585.001": {
+      "id": "T1585.001",
+      "is_subtechnique": true,
+      "name": "Social Media Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1585.002": {
+      "id": "T1585.002",
+      "is_subtechnique": true,
+      "name": "Email Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1585.003": {
+      "id": "T1585.003",
+      "is_subtechnique": true,
+      "name": "Cloud Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1586": {
+      "id": "T1586",
+      "is_subtechnique": false,
+      "name": "Compromise Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1586.001": {
+      "id": "T1586.001",
+      "is_subtechnique": true,
+      "name": "Social Media Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1586.002": {
+      "id": "T1586.002",
+      "is_subtechnique": true,
+      "name": "Email Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1586.003": {
+      "id": "T1586.003",
+      "is_subtechnique": true,
+      "name": "Cloud Accounts",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1587": {
+      "id": "T1587",
+      "is_subtechnique": false,
+      "name": "Develop Capabilities",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1587.001": {
+      "id": "T1587.001",
+      "is_subtechnique": true,
+      "name": "Malware",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1587.002": {
+      "id": "T1587.002",
+      "is_subtechnique": true,
+      "name": "Code Signing Certificates",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1587.003": {
+      "id": "T1587.003",
+      "is_subtechnique": true,
+      "name": "Digital Certificates",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1587.004": {
+      "id": "T1587.004",
+      "is_subtechnique": true,
+      "name": "Exploits",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588": {
+      "id": "T1588",
+      "is_subtechnique": false,
+      "name": "Obtain Capabilities",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.001": {
+      "id": "T1588.001",
+      "is_subtechnique": true,
+      "name": "Malware",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.002": {
+      "id": "T1588.002",
+      "is_subtechnique": true,
+      "name": "Tool",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.003": {
+      "id": "T1588.003",
+      "is_subtechnique": true,
+      "name": "Code Signing Certificates",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.004": {
+      "id": "T1588.004",
+      "is_subtechnique": true,
+      "name": "Digital Certificates",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.005": {
+      "id": "T1588.005",
+      "is_subtechnique": true,
+      "name": "Exploits",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.006": {
+      "id": "T1588.006",
+      "is_subtechnique": true,
+      "name": "Vulnerabilities",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1588.007": {
+      "id": "T1588.007",
+      "is_subtechnique": true,
+      "name": "Artificial Intelligence",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1589": {
+      "id": "T1589",
+      "is_subtechnique": false,
+      "name": "Gather Victim Identity Information",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1589.001": {
+      "id": "T1589.001",
+      "is_subtechnique": true,
+      "name": "Credentials",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1589.002": {
+      "id": "T1589.002",
+      "is_subtechnique": true,
+      "name": "Email Addresses",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1589.003": {
+      "id": "T1589.003",
+      "is_subtechnique": true,
+      "name": "Employee Names",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590": {
+      "id": "T1590",
+      "is_subtechnique": false,
+      "name": "Gather Victim Network Information",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.001": {
+      "id": "T1590.001",
+      "is_subtechnique": true,
+      "name": "Domain Properties",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.002": {
+      "id": "T1590.002",
+      "is_subtechnique": true,
+      "name": "DNS",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.003": {
+      "id": "T1590.003",
+      "is_subtechnique": true,
+      "name": "Network Trust Dependencies",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.004": {
+      "id": "T1590.004",
+      "is_subtechnique": true,
+      "name": "Network Topology",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.005": {
+      "id": "T1590.005",
+      "is_subtechnique": true,
+      "name": "IP Addresses",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1590.006": {
+      "id": "T1590.006",
+      "is_subtechnique": true,
+      "name": "Network Security Appliances",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1591": {
+      "id": "T1591",
+      "is_subtechnique": false,
+      "name": "Gather Victim Org Information",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1591.001": {
+      "id": "T1591.001",
+      "is_subtechnique": true,
+      "name": "Determine Physical Locations",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1591.002": {
+      "id": "T1591.002",
+      "is_subtechnique": true,
+      "name": "Business Relationships",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1591.003": {
+      "id": "T1591.003",
+      "is_subtechnique": true,
+      "name": "Identify Business Tempo",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1591.004": {
+      "id": "T1591.004",
+      "is_subtechnique": true,
+      "name": "Identify Roles",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1592": {
+      "id": "T1592",
+      "is_subtechnique": false,
+      "name": "Gather Victim Host Information",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1592.001": {
+      "id": "T1592.001",
+      "is_subtechnique": true,
+      "name": "Hardware",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1592.002": {
+      "id": "T1592.002",
+      "is_subtechnique": true,
+      "name": "Software",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1592.003": {
+      "id": "T1592.003",
+      "is_subtechnique": true,
+      "name": "Firmware",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1592.004": {
+      "id": "T1592.004",
+      "is_subtechnique": true,
+      "name": "Client Configurations",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1593": {
+      "id": "T1593",
+      "is_subtechnique": false,
+      "name": "Search Open Websites/Domains",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1593.001": {
+      "id": "T1593.001",
+      "is_subtechnique": true,
+      "name": "Social Media",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1593.002": {
+      "id": "T1593.002",
+      "is_subtechnique": true,
+      "name": "Search Engines",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1593.003": {
+      "id": "T1593.003",
+      "is_subtechnique": true,
+      "name": "Code Repositories",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1594": {
+      "id": "T1594",
+      "is_subtechnique": false,
+      "name": "Search Victim-Owned Websites",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1595": {
+      "id": "T1595",
+      "is_subtechnique": false,
+      "name": "Active Scanning",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1595.001": {
+      "id": "T1595.001",
+      "is_subtechnique": true,
+      "name": "Scanning IP Blocks",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1595.002": {
+      "id": "T1595.002",
+      "is_subtechnique": true,
+      "name": "Vulnerability Scanning",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1595.003": {
+      "id": "T1595.003",
+      "is_subtechnique": true,
+      "name": "Wordlist Scanning",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596": {
+      "id": "T1596",
+      "is_subtechnique": false,
+      "name": "Search Open Technical Databases",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596.001": {
+      "id": "T1596.001",
+      "is_subtechnique": true,
+      "name": "DNS/Passive DNS",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596.002": {
+      "id": "T1596.002",
+      "is_subtechnique": true,
+      "name": "WHOIS",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596.003": {
+      "id": "T1596.003",
+      "is_subtechnique": true,
+      "name": "Digital Certificates",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596.004": {
+      "id": "T1596.004",
+      "is_subtechnique": true,
+      "name": "CDNs",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1596.005": {
+      "id": "T1596.005",
+      "is_subtechnique": true,
+      "name": "Scan Databases",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1597": {
+      "id": "T1597",
+      "is_subtechnique": false,
+      "name": "Search Closed Sources",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1597.001": {
+      "id": "T1597.001",
+      "is_subtechnique": true,
+      "name": "Threat Intel Vendors",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1597.002": {
+      "id": "T1597.002",
+      "is_subtechnique": true,
+      "name": "Purchase Technical Data",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1598": {
+      "id": "T1598",
+      "is_subtechnique": false,
+      "name": "Phishing for Information",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1598.001": {
+      "id": "T1598.001",
+      "is_subtechnique": true,
+      "name": "Spearphishing Service",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1598.002": {
+      "id": "T1598.002",
+      "is_subtechnique": true,
+      "name": "Spearphishing Attachment",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1598.003": {
+      "id": "T1598.003",
+      "is_subtechnique": true,
+      "name": "Spearphishing Link",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1598.004": {
+      "id": "T1598.004",
+      "is_subtechnique": true,
+      "name": "Spearphishing Voice",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1599": {
+      "id": "T1599",
+      "is_subtechnique": false,
+      "name": "Network Boundary Bridging",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1599.001": {
+      "id": "T1599.001",
+      "is_subtechnique": true,
+      "name": "Network Address Translation Traversal",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1600": {
+      "id": "T1600",
+      "is_subtechnique": false,
+      "name": "Weaken Encryption",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1600.001": {
+      "id": "T1600.001",
+      "is_subtechnique": true,
+      "name": "Reduce Key Space",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1600.002": {
+      "id": "T1600.002",
+      "is_subtechnique": true,
+      "name": "Disable Crypto Hardware",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1601": {
+      "id": "T1601",
+      "is_subtechnique": false,
+      "name": "Modify System Image",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1601.001": {
+      "id": "T1601.001",
+      "is_subtechnique": true,
+      "name": "Patch System Image",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1601.002": {
+      "id": "T1601.002",
+      "is_subtechnique": true,
+      "name": "Downgrade System Image",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1602": {
+      "id": "T1602",
+      "is_subtechnique": false,
+      "name": "Data from Configuration Repository",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1602.001": {
+      "id": "T1602.001",
+      "is_subtechnique": true,
+      "name": "SNMP (MIB Dump)",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1602.002": {
+      "id": "T1602.002",
+      "is_subtechnique": true,
+      "name": "Network Device Configuration Dump",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "collection"
+      ]
+    },
+    "T1606": {
+      "id": "T1606",
+      "is_subtechnique": false,
+      "name": "Forge Web Credentials",
+      "platforms": [
+        "SaaS",
+        "Windows",
+        "macOS",
+        "Linux",
+        "IaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1606.001": {
+      "id": "T1606.001",
+      "is_subtechnique": true,
+      "name": "Web Cookies",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "SaaS",
+        "IaaS"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1606.002": {
+      "id": "T1606.002",
+      "is_subtechnique": true,
+      "name": "SAML Tokens",
+      "platforms": [
+        "SaaS",
+        "Windows",
+        "IaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1608": {
+      "id": "T1608",
+      "is_subtechnique": false,
+      "name": "Stage Capabilities",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.001": {
+      "id": "T1608.001",
+      "is_subtechnique": true,
+      "name": "Upload Malware",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.002": {
+      "id": "T1608.002",
+      "is_subtechnique": true,
+      "name": "Upload Tool",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.003": {
+      "id": "T1608.003",
+      "is_subtechnique": true,
+      "name": "Install Digital Certificate",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.004": {
+      "id": "T1608.004",
+      "is_subtechnique": true,
+      "name": "Drive-by Target",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.005": {
+      "id": "T1608.005",
+      "is_subtechnique": true,
+      "name": "Link Target",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1608.006": {
+      "id": "T1608.006",
+      "is_subtechnique": true,
+      "name": "SEO Poisoning",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1609": {
+      "id": "T1609",
+      "is_subtechnique": false,
+      "name": "Container Administration Command",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1610": {
+      "id": "T1610",
+      "is_subtechnique": false,
+      "name": "Deploy Container",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1611": {
+      "id": "T1611",
+      "is_subtechnique": false,
+      "name": "Escape to Host",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "Containers",
+        "ESXi"
+      ],
+      "tactics": [
+        "privilege-escalation"
+      ]
+    },
+    "T1612": {
+      "id": "T1612",
+      "is_subtechnique": false,
+      "name": "Build Image on Host",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1613": {
+      "id": "T1613",
+      "is_subtechnique": false,
+      "name": "Container and Resource Discovery",
+      "platforms": [
+        "Containers"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1614": {
+      "id": "T1614",
+      "is_subtechnique": false,
+      "name": "System Location Discovery",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1614.001": {
+      "id": "T1614.001",
+      "is_subtechnique": true,
+      "name": "System Language Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1615": {
+      "id": "T1615",
+      "is_subtechnique": false,
+      "name": "Group Policy Discovery",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1619": {
+      "id": "T1619",
+      "is_subtechnique": false,
+      "name": "Cloud Storage Object Discovery",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1620": {
+      "id": "T1620",
+      "is_subtechnique": false,
+      "name": "Reflective Code Loading",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1621": {
+      "id": "T1621",
+      "is_subtechnique": false,
+      "name": "Multi-Factor Authentication Request Generation",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "IaaS",
+        "SaaS",
+        "Office Suite",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1622": {
+      "id": "T1622",
+      "is_subtechnique": false,
+      "name": "Debugger Evasion",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth",
+        "discovery"
+      ]
+    },
+    "T1647": {
+      "id": "T1647",
+      "is_subtechnique": false,
+      "name": "Plist File Modification",
+      "platforms": [
+        "macOS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1648": {
+      "id": "T1648",
+      "is_subtechnique": false,
+      "name": "Serverless Execution",
+      "platforms": [
+        "SaaS",
+        "IaaS",
+        "Office Suite"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1649": {
+      "id": "T1649",
+      "is_subtechnique": false,
+      "name": "Steal or Forge Authentication Certificates",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Identity Provider"
+      ],
+      "tactics": [
+        "credential-access"
+      ]
+    },
+    "T1650": {
+      "id": "T1650",
+      "is_subtechnique": false,
+      "name": "Acquire Access",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1651": {
+      "id": "T1651",
+      "is_subtechnique": false,
+      "name": "Cloud Administration Command",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1652": {
+      "id": "T1652",
+      "is_subtechnique": false,
+      "name": "Device Driver Discovery",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1653": {
+      "id": "T1653",
+      "is_subtechnique": false,
+      "name": "Power Settings",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS",
+        "Network Devices"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1654": {
+      "id": "T1654",
+      "is_subtechnique": false,
+      "name": "Log Enumeration",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1657": {
+      "id": "T1657",
+      "is_subtechnique": false,
+      "name": "Financial Theft",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1659": {
+      "id": "T1659",
+      "is_subtechnique": false,
+      "name": "Content Injection",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "initial-access",
+        "command-and-control"
+      ]
+    },
+    "T1665": {
+      "id": "T1665",
+      "is_subtechnique": false,
+      "name": "Hide Infrastructure",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "command-and-control"
+      ]
+    },
+    "T1666": {
+      "id": "T1666",
+      "is_subtechnique": false,
+      "name": "Modify Cloud Resource Hierarchy",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1667": {
+      "id": "T1667",
+      "is_subtechnique": false,
+      "name": "Email Bombing",
+      "platforms": [
+        "Linux",
+        "Office Suite",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "impact"
+      ]
+    },
+    "T1668": {
+      "id": "T1668",
+      "is_subtechnique": false,
+      "name": "Exclusive Control",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1669": {
+      "id": "T1669",
+      "is_subtechnique": false,
+      "name": "Wi-Fi Networks",
+      "platforms": [
+        "Linux",
+        "Network Devices",
+        "Windows",
+        "macOS"
+      ],
+      "tactics": [
+        "initial-access"
+      ]
+    },
+    "T1671": {
+      "id": "T1671",
+      "is_subtechnique": false,
+      "name": "Cloud Application Integration",
+      "platforms": [
+        "Office Suite",
+        "SaaS"
+      ],
+      "tactics": [
+        "persistence"
+      ]
+    },
+    "T1673": {
+      "id": "T1673",
+      "is_subtechnique": false,
+      "name": "Virtual Machine Discovery",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1674": {
+      "id": "T1674",
+      "is_subtechnique": false,
+      "name": "Input Injection",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1675": {
+      "id": "T1675",
+      "is_subtechnique": false,
+      "name": "ESXi Administration Command",
+      "platforms": [
+        "ESXi"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1677": {
+      "id": "T1677",
+      "is_subtechnique": false,
+      "name": "Poisoned Pipeline Execution",
+      "platforms": [
+        "SaaS"
+      ],
+      "tactics": [
+        "execution"
+      ]
+    },
+    "T1678": {
+      "id": "T1678",
+      "is_subtechnique": false,
+      "name": "Delay Execution",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1679": {
+      "id": "T1679",
+      "is_subtechnique": false,
+      "name": "Selective Exclusion",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1680": {
+      "id": "T1680",
+      "is_subtechnique": false,
+      "name": "Local Storage Discovery",
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "discovery"
+      ]
+    },
+    "T1681": {
+      "id": "T1681",
+      "is_subtechnique": false,
+      "name": "Search Threat Vendor Data",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1682": {
+      "id": "T1682",
+      "is_subtechnique": false,
+      "name": "Query Public AI Services",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "reconnaissance"
+      ]
+    },
+    "T1683": {
+      "id": "T1683",
+      "is_subtechnique": false,
+      "name": "Generate Content",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1683.001": {
+      "id": "T1683.001",
+      "is_subtechnique": true,
+      "name": "Written Content",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1683.002": {
+      "id": "T1683.002",
+      "is_subtechnique": true,
+      "name": "Audio-Visual Content",
+      "platforms": [
+        "PRE"
+      ],
+      "tactics": [
+        "resource-development"
+      ]
+    },
+    "T1684": {
+      "id": "T1684",
+      "is_subtechnique": false,
+      "name": "Social Engineering",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1684.001": {
+      "id": "T1684.001",
+      "is_subtechnique": true,
+      "name": "Impersonation",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1684.002": {
+      "id": "T1684.002",
+      "is_subtechnique": true,
+      "name": "Email Spoofing",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "Windows"
+      ],
+      "tactics": [
+        "stealth"
+      ]
+    },
+    "T1685": {
+      "id": "T1685",
+      "is_subtechnique": false,
+      "name": "Disable or Modify Tools",
+      "platforms": [
+        "Containers",
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.001": {
+      "id": "T1685.001",
+      "is_subtechnique": true,
+      "name": "Disable or Modify Windows Event Log",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.002": {
+      "id": "T1685.002",
+      "is_subtechnique": true,
+      "name": "Disable or Modify Cloud Log",
+      "platforms": [
+        "IaaS",
+        "SaaS",
+        "Identity Provider",
+        "Office Suite"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.003": {
+      "id": "T1685.003",
+      "is_subtechnique": true,
+      "name": "Modify or Spoof Tool UI",
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.004": {
+      "id": "T1685.004",
+      "is_subtechnique": true,
+      "name": "Disable or Modify Linux Audit System Log",
+      "platforms": [
+        "Linux"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.005": {
+      "id": "T1685.005",
+      "is_subtechnique": true,
+      "name": "Clear Windows Event Logs",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1685.006": {
+      "id": "T1685.006",
+      "is_subtechnique": true,
+      "name": "Clear Linux or Mac System Logs",
+      "platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1686": {
+      "id": "T1686",
+      "is_subtechnique": false,
+      "name": "Disable or Modify System Firewall",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1686.001": {
+      "id": "T1686.001",
+      "is_subtechnique": true,
+      "name": "Cloud Firewall",
+      "platforms": [
+        "IaaS"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1686.002": {
+      "id": "T1686.002",
+      "is_subtechnique": true,
+      "name": "Network Device Firewall",
+      "platforms": [
+        "Network Devices"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1686.003": {
+      "id": "T1686.003",
+      "is_subtechnique": true,
+      "name": "Windows Host Firewall",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1687": {
+      "id": "T1687",
+      "is_subtechnique": false,
+      "name": "Exploitation for Defense Impairment",
+      "platforms": [
+        "IaaS",
+        "Linux",
+        "macOS",
+        "SaaS",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1688": {
+      "id": "T1688",
+      "is_subtechnique": false,
+      "name": "Safe Mode Boot",
+      "platforms": [
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1689": {
+      "id": "T1689",
+      "is_subtechnique": false,
+      "name": "Downgrade Attack",
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    },
+    "T1690": {
+      "id": "T1690",
+      "is_subtechnique": false,
+      "name": "Prevent Command History Logging",
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "tactics": [
+        "defense-impairment"
+      ]
+    }
+  },
+  "version": "19.2"
+}

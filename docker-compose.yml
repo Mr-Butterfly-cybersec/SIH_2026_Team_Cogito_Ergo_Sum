@@ -1,0 +1,53 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-crq}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-crq}
+      POSTGRES_DB: ${POSTGRES_DB:-crq}
+    ports:
+      - "5432:5432"
+    volumes:
+      - crq_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-crq} -d ${POSTGRES_DB:-crq}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-crq}:${POSTGRES_PASSWORD:-crq}@db:5432/${POSTGRES_DB:-crq}
+      CORS_ORIGINS: http://localhost:3000
+      ENVIRONMENT: development
+      # Inside the container, `localhost` is the container — so a host-run Ollama is only
+      # reachable via the host gateway. Set AI_OLLAMA_MODEL to a model you have actually
+      # pulled AND that supports tool calling (`ollama pull llama3.2`); the AI status
+      # endpoint reports a missing model explicitly rather than failing silently.
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      AI_OLLAMA_MODEL: ${AI_OLLAMA_MODEL:-llama3.2}
+      # Uncomment with a key from console.groq.com to use a hosted model instead.
+      # GROQ_API_KEY: ${GROQ_API_KEY:-}
+    extra_hosts:
+      # Required on Linux for host.docker.internal to resolve (Docker Desktop provides it).
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./frontend
+    environment:
+      # Server-side proxy target (see next.config.ts). NEXT_PUBLIC_* would be baked in at
+      # build time and so cannot be set here.
+      API_PROXY_TARGET: http://api:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  crq_pgdata:

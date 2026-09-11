@@ -1,0 +1,35 @@
+# Build context for backend/Dockerfile.
+# The Dockerfile does `COPY . .`, so without this file the 397 MB virtualenv, the
+# downloaded intel cache and every test cache are copied into the image.
+
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Downloaded threat intel.
+# NOTE: only the raw cache is excluded. `data/normalized/` holds the normalized NVD and
+# ATT&CK records that `VulnerabilityStore` reads at runtime — without them the API serves
+# empty scenarios. Do not ignore the whole `data/` directory.
+data/cache/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Local config and secrets
+.env
+.env.*
+!.env.example
+
+# VCS / editor
+.git/
+.gitignore
+.DS_Store
+.idea/
+.vscode/

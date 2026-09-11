@@ -1,0 +1,34 @@
+{
+  "title": "CISA Catalog of Known Exploited Vulnerabilities",
+  "catalogVersion": "2026.09.09",
+  "dateReleased": "2026-09-09T19:00:50Z",
+  "count": 2,
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-2021-44228",
+      "vendorProject": "Apache",
+      "product": "Log4j2",
+      "vulnerabilityName": "Apache Log4j2 Remote Code Execution Vulnerability",
+      "dateAdded": "2021-12-10",
+      "shortDescription": "Apache Log4j2 contains a vulnerability where JNDI features do not protect against attacker-controlled LDAP.",
+      "requiredAction": "Apply updates per vendor instructions or discontinue use.",
+      "dueDate": "2021-12-24",
+      "knownRansomwareCampaignUse": "Known",
+      "notes": "https://logging.apache.org/log4j/2.x/security.html",
+      "cwes": ["CWE-502", "CWE-400"]
+    },
+    {
+      "cveID": "CVE-2019-0708",
+      "vendorProject": "Microsoft",
+      "product": "Remote Desktop Services",
+      "vulnerabilityName": "Microsoft Remote Desktop Services Remote Code Execution Vulnerability",
+      "dateAdded": "2022-05-04",
+      "shortDescription": "A remote code execution vulnerability exists in Remote Desktop Services.",
+      "requiredAction": "Apply updates per vendor instructions.",
+      "dueDate": "2022-05-25",
+      "knownRansomwareCampaignUse": "Unknown",
+      "notes": "",
+      "cwes": ["CWE-416"]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "SCN-RANSOM-01",
+  "name": "Ransomware through internet-facing endpoint",
+  "description": "Ransomware delivered via an exploited internet-facing service on the admissions web tier, with lateral spread to the file server.",
+  "asset_id": "AST-ADM-WEB-01",
+  "business_service": "Admissions service",
+  "currency": "INR",
+  "cve_ids": [],
+  "attack_techniques": ["T1190", "T1486"],
+  "frequency": {
+    "contact_frequency": {
+      "distribution": { "kind": "pert", "minimum": 2, "mode": 6, "maximum": 20 },
+      "provenance": {
+        "source_type": "OBSERVED_TELEMETRY",
+        "source": "demo SIEM contact attempts (fictional AICTE campus)",
+        "source_date": "2026-09-10",
+        "confidence": 0.55,
+        "assumption_description": "Contact attempts per year against the web tier."
+      }
+    },
+    "probability_of_action": {
+      "distribution": { "kind": "pert", "minimum": 0.05, "mode": 0.2, "maximum": 0.6 },
+      "provenance": {
+        "source_type": "MODEL_ESTIMATE",
+        "source": "analyst estimate",
+        "confidence": 0.45,
+        "assumption_description": "Given contact, probability the actor proceeds against this asset."
+      }
+    },
+    "threat_capability": {
+      "distribution": { "kind": "pert", "minimum": 40, "mode": 65, "maximum": 95 },
+      "provenance": {
+        "source_type": "MODEL_ESTIMATE",
+        "source": "ATT&CK-informed attacker profile",
+        "confidence": 0.4,
+        "assumption_description": "Percentile capability of the relevant ransomware community (0-100)."
+      }
+    },
+    "resistance_strength": {
+      "distribution": { "kind": "pert", "minimum": 20, "mode": 45, "maximum": 80 },
+      "provenance": {
+        "source_type": "USER_INPUT",
+        "source": "control posture assessment",
+        "source_date": "2026-09-10",
+        "confidence": 0.6,
+        "assumption_description": "Estimated resistance of the web tier before MFA and segmentation (0-100)."
+      }
+    }
+  },
+  "magnitude": {
+    "primary": {
+      "incident_response": {
+        "distribution": { "kind": "pert", "minimum": 200000, "mode": 600000, "maximum": 2000000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.2,
+          "assumption_description": "Forensics and incident-response cost. Synthetic demonstration input."
+        }
+      },
+      "downtime": {
+        "distribution": { "kind": "pert", "minimum": 300000, "mode": 900000, "maximum": 3500000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.2,
+          "assumption_description": "Loss of admissions-service availability during recovery. Synthetic."
+        }
+      },
+      "recovery": {
+        "distribution": { "kind": "pert", "minimum": 150000, "mode": 450000, "maximum": 1500000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.2,
+          "assumption_description": "Rebuild and restoration effort. Synthetic."
+        }
+      },
+      "fraud_theft": {
+        "distribution": { "kind": "pert", "minimum": 0, "mode": 100000, "maximum": 800000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.15,
+          "assumption_description": "Direct theft/fraud where payment data is reachable. Synthetic."
+        }
+      },
+      "data_restoration": {
+        "distribution": { "kind": "pert", "minimum": 50000, "mode": 200000, "maximum": 900000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.2,
+          "assumption_description": "Restoring data from backups and validating integrity. Synthetic."
+        }
+      }
+    },
+    "secondary": {
+      "notification_legal": {
+        "distribution": { "kind": "pert", "minimum": 100000, "mode": 350000, "maximum": 1200000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.15,
+          "assumption_description": "Notification and legal costs. Synthetic."
+        }
+      },
+      "regulatory": {
+        "distribution": { "kind": "pert", "minimum": 0, "mode": 500000, "maximum": 2500000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.15,
+          "assumption_description": "Regulatory exposure under DPDP/CERT-In context. Synthetic."
+        }
+      },
+      "customer_impact": {
+        "distribution": { "kind": "pert", "minimum": 50000, "mode": 250000, "maximum": 1000000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.15,
+          "assumption_description": "Credits, support load and churn among applicants. Synthetic."
+        }
+      },
+      "reputational": {
+        "distribution": { "kind": "pert", "minimum": 100000, "mode": 400000, "maximum": 2000000 },
+        "provenance": {
+          "source_type": "SYNTHETIC_DEMO",
+          "source": "demo three-point estimate",
+          "confidence": 0.1,
+          "assumption_description": "Reputational/business consequence proxy. Synthetic."
+        }
+      }
+    },
+    "secondary_loss_event_frequency": {
+      "distribution": { "kind": "pert", "minimum": 0.1, "mode": 0.35, "maximum": 0.7 },
+      "provenance": {
+        "source_type": "MODEL_ESTIMATE",
+        "source": "analyst estimate",
+        "confidence": 0.35,
+        "assumption_description": "Probability a primary loss also triggers secondary loss."
+      }
+    }
+  }
+}

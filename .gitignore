@@ -1,0 +1,46 @@
+# --- secrets ---
+.env
+.env.*
+!.env.example
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# --- node / next ---
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# --- data caches (raw downloads; normalized intel IS committed — see below) ---
+# backend/data/normalized/*.json is committed deliberately: the demo estate and the whole
+# test suite read it through VulnerabilityStore, so without it the app cannot build offline
+# and CI would fail. It is only 320 KB and is deterministic, which is the whole point.
+# Only the raw download cache is excluded.
+backend/data/cache/
+*.json.gz
+
+# --- agent working state (private; not part of the project) ---
+.commandcode/
+MEMORY.md
+SESSION.md
+backend/.hypothesis/
+frontend/AGENTS.md
+frontend/CLAUDE.md
+
+# --- misc ---
+.DS_Store
+*.log
+.idea/
+.vscode/

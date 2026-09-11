@@ -1,0 +1,1258 @@
+{
+  "generated_at": "2026-09-10T22:51:30+00:00",
+  "organization": "Vidyanagar Institute of Technology (fictional campus)",
+  "currency": "INR",
+  "candidates": 11,
+  "scenarios": 8,
+  "trials": 20000,
+  "seeds": [
+    42,
+    7,
+    2026
+  ],
+  "budgets": [
+    500000.0,
+    1000000.0,
+    2500000.0,
+    5000000.0,
+    10000000.0
+  ],
+  "python": "3.12.4",
+  "library_versions": {
+    "python": "3.12.4",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "results": [
+    {
+      "budget": 500000.0,
+      "seed": 42,
+      "n_trials": 20000,
+      "baseline_eal": 56480633.39,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 27.9847,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40303923.39,
+          "risk_reduction": 16176710.0,
+          "risk_reduction_pct": 28.6412,
+          "risk_removed_per_rupee": 46.2192
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 1,
+          "spend": 420000.0,
+          "eal": 56109834.92,
+          "risk_reduction": 370798.47,
+          "risk_reduction_pct": 0.6565,
+          "risk_removed_per_rupee": 0.8829
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 1,
+          "spend": 480000.0,
+          "eal": 55815924.49,
+          "risk_reduction": 664708.91,
+          "risk_reduction_pct": 1.1769,
+          "risk_removed_per_rupee": 1.3848
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40303923.39,
+          "risk_reduction": 16176710.0,
+          "risk_reduction_pct": 28.6412,
+          "risk_removed_per_rupee": 46.2192
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 1,
+          "spend": 250000.0,
+          "eal": 53788285.41,
+          "risk_reduction": 2692347.99,
+          "risk_reduction_pct": 4.7669,
+          "risk_removed_per_rupee": 10.7694
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 1,
+          "spend": 420000.0,
+          "eal": 56109834.92,
+          "risk_reduction": 370798.47,
+          "risk_reduction_pct": 0.6565,
+          "risk_removed_per_rupee": 0.8829
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40303923.39,
+          "risk_reduction": 16176710.0,
+          "risk_reduction_pct": 28.6412,
+          "risk_removed_per_rupee": 46.2192
+        }
+      ]
+    },
+    {
+      "budget": 500000.0,
+      "seed": 7,
+      "n_trials": 20000,
+      "baseline_eal": 56448534.24,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 27.8939,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40153778.82,
+          "risk_reduction": 16294755.42,
+          "risk_reduction_pct": 28.8666,
+          "risk_removed_per_rupee": 46.5564
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 1,
+          "spend": 420000.0,
+          "eal": 55899469.89,
+          "risk_reduction": 549064.35,
+          "risk_reduction_pct": 0.9727,
+          "risk_removed_per_rupee": 1.3073
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 1,
+          "spend": 480000.0,
+          "eal": 55777139.01,
+          "risk_reduction": 671395.23,
+          "risk_reduction_pct": 1.1894,
+          "risk_removed_per_rupee": 1.3987
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40153778.82,
+          "risk_reduction": 16294755.42,
+          "risk_reduction_pct": 28.8666,
+          "risk_removed_per_rupee": 46.5564
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 1,
+          "spend": 250000.0,
+          "eal": 53754327.38,
+          "risk_reduction": 2694206.86,
+          "risk_reduction_pct": 4.7729,
+          "risk_removed_per_rupee": 10.7768
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 1,
+          "spend": 420000.0,
+          "eal": 55899469.89,
+          "risk_reduction": 549064.35,
+          "risk_reduction_pct": 0.9727,
+          "risk_removed_per_rupee": 1.3073
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40153778.82,
+          "risk_reduction": 16294755.42,
+          "risk_reduction_pct": 28.8666,
+          "risk_removed_per_rupee": 46.5564
+        }
+      ]
+    },
+    {
+      "budget": 500000.0,
+      "seed": 2026,
+      "n_trials": 20000,
+      "baseline_eal": 56289203.3,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 27.8076,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40123248.81,
+          "risk_reduction": 16165954.49,
+          "risk_reduction_pct": 28.7195,
+          "risk_removed_per_rupee": 46.1884
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 1,
+          "spend": 420000.0,
+          "eal": 55775896.64,
+          "risk_reduction": 513306.66,
+          "risk_reduction_pct": 0.9119,
+          "risk_removed_per_rupee": 1.2222
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 1,
+          "spend": 480000.0,
+          "eal": 55614469.33,
+          "risk_reduction": 674733.97,
+          "risk_reduction_pct": 1.1987,
+          "risk_removed_per_rupee": 1.4057
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40123248.81,
+          "risk_reduction": 16165954.49,
+          "risk_reduction_pct": 28.7195,
+          "risk_removed_per_rupee": 46.1884
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 1,
+          "spend": 250000.0,
+          "eal": 53586403.08,
+          "risk_reduction": 2702800.22,
+          "risk_reduction_pct": 4.8016,
+          "risk_removed_per_rupee": 10.8112
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 1,
+          "spend": 300000.0,
+          "eal": 54880455.86,
+          "risk_reduction": 1408747.44,
+          "risk_reduction_pct": 2.5027,
+          "risk_removed_per_rupee": 4.6958
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 1,
+          "spend": 350000.0,
+          "eal": 40123248.81,
+          "risk_reduction": 16165954.49,
+          "risk_reduction_pct": 28.7195,
+          "risk_removed_per_rupee": 46.1884
+        }
+      ]
+    },
+    {
+      "budget": 1000000.0,
+      "seed": 42,
+      "n_trials": 20000,
+      "baseline_eal": 56480633.39,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 27.9145,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36221651.56,
+          "risk_reduction": 20258981.84,
+          "risk_reduction_pct": 35.8689,
+          "risk_removed_per_rupee": 22.51
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51987917.26,
+          "risk_reduction": 4492716.13,
+          "risk_reduction_pct": 7.9544,
+          "risk_removed_per_rupee": 4.7292
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51987917.26,
+          "risk_reduction": 4492716.13,
+          "risk_reduction_pct": 7.9544,
+          "risk_removed_per_rupee": 4.7292
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36221651.56,
+          "risk_reduction": 20258981.84,
+          "risk_reduction_pct": 35.8689,
+          "risk_removed_per_rupee": 22.51
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36221651.56,
+          "risk_reduction": 20258981.84,
+          "risk_reduction_pct": 35.8689,
+          "risk_removed_per_rupee": 22.51
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 2,
+          "spend": 1000000.0,
+          "eal": 52648056.29,
+          "risk_reduction": 3832577.11,
+          "risk_reduction_pct": 6.7856,
+          "risk_removed_per_rupee": 3.8326
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36221651.56,
+          "risk_reduction": 20258981.84,
+          "risk_reduction_pct": 35.8689,
+          "risk_removed_per_rupee": 22.51
+        }
+      ]
+    },
+    {
+      "budget": 1000000.0,
+      "seed": 7,
+      "n_trials": 20000,
+      "baseline_eal": 56448534.24,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 28.1984,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36079728.19,
+          "risk_reduction": 20368806.05,
+          "risk_reduction_pct": 36.0839,
+          "risk_removed_per_rupee": 22.632
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51997303.01,
+          "risk_reduction": 4451231.23,
+          "risk_reduction_pct": 7.8855,
+          "risk_removed_per_rupee": 4.6855
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51997303.01,
+          "risk_reduction": 4451231.23,
+          "risk_reduction_pct": 7.8855,
+          "risk_removed_per_rupee": 4.6855
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36079728.19,
+          "risk_reduction": 20368806.05,
+          "risk_reduction_pct": 36.0839,
+          "risk_removed_per_rupee": 22.632
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36079728.19,
+          "risk_reduction": 20368806.05,
+          "risk_reduction_pct": 36.0839,
+          "risk_removed_per_rupee": 22.632
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51997303.01,
+          "risk_reduction": 4451231.23,
+          "risk_reduction_pct": 7.8855,
+          "risk_removed_per_rupee": 4.6855
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36079728.19,
+          "risk_reduction": 20368806.05,
+          "risk_reduction_pct": 36.0839,
+          "risk_removed_per_rupee": 22.632
+        }
+      ]
+    },
+    {
+      "budget": 1000000.0,
+      "seed": 2026,
+      "n_trials": 20000,
+      "baseline_eal": 56289203.3,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 28.2537,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36011701.16,
+          "risk_reduction": 20277502.14,
+          "risk_reduction_pct": 36.0238,
+          "risk_removed_per_rupee": 22.5306
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51915472.42,
+          "risk_reduction": 4373730.88,
+          "risk_reduction_pct": 7.7701,
+          "risk_removed_per_rupee": 4.6039
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 2,
+          "spend": 950000.0,
+          "eal": 51915472.42,
+          "risk_reduction": 4373730.88,
+          "risk_reduction_pct": 7.7701,
+          "risk_removed_per_rupee": 4.6039
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36011701.16,
+          "risk_reduction": 20277502.14,
+          "risk_reduction_pct": 36.0238,
+          "risk_removed_per_rupee": 22.5306
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36011701.16,
+          "risk_reduction": 20277502.14,
+          "risk_reduction_pct": 36.0238,
+          "risk_removed_per_rupee": 22.5306
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 2,
+          "spend": 850000.0,
+          "eal": 54075725.06,
+          "risk_reduction": 2213478.24,
+          "risk_reduction_pct": 3.9323,
+          "risk_removed_per_rupee": 2.6041
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 3,
+          "spend": 900000.0,
+          "eal": 36011701.16,
+          "risk_reduction": 20277502.14,
+          "risk_reduction_pct": 36.0238,
+          "risk_removed_per_rupee": 22.5306
+        }
+      ]
+    },
+    {
+      "budget": 2500000.0,
+      "seed": 42,
+      "n_trials": 20000,
+      "baseline_eal": 56480633.39,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 2.6565,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 31145266.47,
+          "risk_reduction": 25335366.92,
+          "risk_reduction_pct": 44.8567,
+          "risk_removed_per_rupee": 10.1341
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32645712.15,
+          "risk_reduction": 23834921.25,
+          "risk_reduction_pct": 42.2002,
+          "risk_removed_per_rupee": 9.7285
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32645712.15,
+          "risk_reduction": 23834921.25,
+          "risk_reduction_pct": 42.2002,
+          "risk_removed_per_rupee": 9.7285
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 31145266.47,
+          "risk_reduction": 25335366.92,
+          "risk_reduction_pct": 44.8567,
+          "risk_removed_per_rupee": 10.1341
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 6,
+          "spend": 2370000.0,
+          "eal": 31828042.29,
+          "risk_reduction": 24652591.1,
+          "risk_reduction_pct": 43.6479,
+          "risk_removed_per_rupee": 10.4019
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 5,
+          "spend": 2250000.0,
+          "eal": 35688284.53,
+          "risk_reduction": 20792348.87,
+          "risk_reduction_pct": 36.8132,
+          "risk_removed_per_rupee": 9.241
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 31145266.47,
+          "risk_reduction": 25335366.92,
+          "risk_reduction_pct": 44.8567,
+          "risk_removed_per_rupee": 10.1341
+        }
+      ]
+    },
+    {
+      "budget": 2500000.0,
+      "seed": 7,
+      "n_trials": 20000,
+      "baseline_eal": 56448534.24,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 2.6975,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30989129.38,
+          "risk_reduction": 25459404.86,
+          "risk_reduction_pct": 45.102,
+          "risk_removed_per_rupee": 10.1838
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32511822.01,
+          "risk_reduction": 23936712.23,
+          "risk_reduction_pct": 42.4045,
+          "risk_removed_per_rupee": 9.7701
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32511822.01,
+          "risk_reduction": 23936712.23,
+          "risk_reduction_pct": 42.4045,
+          "risk_removed_per_rupee": 9.7701
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30989129.38,
+          "risk_reduction": 25459404.86,
+          "risk_reduction_pct": 45.102,
+          "risk_removed_per_rupee": 10.1838
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 6,
+          "spend": 2370000.0,
+          "eal": 31654845.43,
+          "risk_reduction": 24793688.81,
+          "risk_reduction_pct": 43.9226,
+          "risk_removed_per_rupee": 10.4615
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 5,
+          "spend": 2420000.0,
+          "eal": 47151156.27,
+          "risk_reduction": 9297377.98,
+          "risk_reduction_pct": 16.4705,
+          "risk_removed_per_rupee": 3.8419
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30989129.38,
+          "risk_reduction": 25459404.86,
+          "risk_reduction_pct": 45.102,
+          "risk_removed_per_rupee": 10.1838
+        }
+      ]
+    },
+    {
+      "budget": 2500000.0,
+      "seed": 2026,
+      "n_trials": 20000,
+      "baseline_eal": 56289203.3,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 2.7706,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30965140.34,
+          "risk_reduction": 25324062.96,
+          "risk_reduction_pct": 44.9892,
+          "risk_removed_per_rupee": 10.1296
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32524684.58,
+          "risk_reduction": 23764518.72,
+          "risk_reduction_pct": 42.2186,
+          "risk_removed_per_rupee": 9.6998
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 6,
+          "spend": 2450000.0,
+          "eal": 32524684.58,
+          "risk_reduction": 23764518.72,
+          "risk_reduction_pct": 42.2186,
+          "risk_removed_per_rupee": 9.6998
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30965140.34,
+          "risk_reduction": 25324062.96,
+          "risk_reduction_pct": 44.9892,
+          "risk_removed_per_rupee": 10.1296
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 6,
+          "spend": 2370000.0,
+          "eal": 31582797.61,
+          "risk_reduction": 24706405.69,
+          "risk_reduction_pct": 43.8919,
+          "risk_removed_per_rupee": 10.4246
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 5,
+          "spend": 2450000.0,
+          "eal": 53320896.68,
+          "risk_reduction": 2968306.62,
+          "risk_reduction_pct": 5.2733,
+          "risk_removed_per_rupee": 1.2116
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 6,
+          "spend": 2500000.0,
+          "eal": 30965140.34,
+          "risk_reduction": 25324062.96,
+          "risk_reduction_pct": 44.9892,
+          "risk_removed_per_rupee": 10.1296
+        }
+      ]
+    },
+    {
+      "budget": 5000000.0,
+      "seed": 42,
+      "n_trials": 20000,
+      "baseline_eal": 56480633.39,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27926280.41,
+          "risk_reduction": 28554352.98,
+          "risk_reduction_pct": 50.556,
+          "risk_removed_per_rupee": 5.7686
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27926280.41,
+          "risk_reduction": 28554352.98,
+          "risk_reduction_pct": 50.556,
+          "risk_removed_per_rupee": 5.7686
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27926280.41,
+          "risk_reduction": 28554352.98,
+          "risk_reduction_pct": 50.556,
+          "risk_removed_per_rupee": 5.7686
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 9,
+          "spend": 4680000.0,
+          "eal": 28118034.22,
+          "risk_reduction": 28362599.17,
+          "risk_reduction_pct": 50.2165,
+          "risk_removed_per_rupee": 6.0604
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 10,
+          "spend": 4750000.0,
+          "eal": 28029160.56,
+          "risk_reduction": 28451472.84,
+          "risk_reduction_pct": 50.3739,
+          "risk_removed_per_rupee": 5.9898
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 10,
+          "spend": 5000000.0,
+          "eal": 30716719.28,
+          "risk_reduction": 25763914.11,
+          "risk_reduction_pct": 45.6155,
+          "risk_removed_per_rupee": 5.1528
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27926280.41,
+          "risk_reduction": 28554352.98,
+          "risk_reduction_pct": 50.556,
+          "risk_removed_per_rupee": 5.7686
+        }
+      ]
+    },
+    {
+      "budget": 5000000.0,
+      "seed": 7,
+      "n_trials": 20000,
+      "baseline_eal": 56448534.24,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27788592.34,
+          "risk_reduction": 28659941.9,
+          "risk_reduction_pct": 50.7718,
+          "risk_removed_per_rupee": 5.7899
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27788592.34,
+          "risk_reduction": 28659941.9,
+          "risk_reduction_pct": 50.7718,
+          "risk_removed_per_rupee": 5.7899
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27788592.34,
+          "risk_reduction": 28659941.9,
+          "risk_reduction_pct": 50.7718,
+          "risk_removed_per_rupee": 5.7899
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 9,
+          "spend": 4680000.0,
+          "eal": 27987273.5,
+          "risk_reduction": 28461260.74,
+          "risk_reduction_pct": 50.4198,
+          "risk_removed_per_rupee": 6.0815
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 10,
+          "spend": 4750000.0,
+          "eal": 27888275.54,
+          "risk_reduction": 28560258.7,
+          "risk_reduction_pct": 50.5952,
+          "risk_removed_per_rupee": 6.0127
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 9,
+          "spend": 4750000.0,
+          "eal": 43732964.58,
+          "risk_reduction": 12715569.66,
+          "risk_reduction_pct": 22.526,
+          "risk_removed_per_rupee": 2.677
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27788592.34,
+          "risk_reduction": 28659941.9,
+          "risk_reduction_pct": 50.7718,
+          "risk_removed_per_rupee": 5.7899
+        }
+      ]
+    },
+    {
+      "budget": 5000000.0,
+      "seed": 2026,
+      "n_trials": 20000,
+      "baseline_eal": 56289203.3,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27843078.72,
+          "risk_reduction": 28446124.58,
+          "risk_reduction_pct": 50.5357,
+          "risk_removed_per_rupee": 5.7467
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27843078.72,
+          "risk_reduction": 28446124.58,
+          "risk_reduction_pct": 50.5357,
+          "risk_removed_per_rupee": 5.7467
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27843078.72,
+          "risk_reduction": 28446124.58,
+          "risk_reduction_pct": 50.5357,
+          "risk_removed_per_rupee": 5.7467
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 9,
+          "spend": 4680000.0,
+          "eal": 28104630.57,
+          "risk_reduction": 28184572.73,
+          "risk_reduction_pct": 50.071,
+          "risk_removed_per_rupee": 6.0223
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 10,
+          "spend": 4750000.0,
+          "eal": 27945197.64,
+          "risk_reduction": 28344005.66,
+          "risk_reduction_pct": 50.3542,
+          "risk_removed_per_rupee": 5.9672
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 10,
+          "spend": 5000000.0,
+          "eal": 30466646.26,
+          "risk_reduction": 25822557.04,
+          "risk_reduction_pct": 45.8748,
+          "risk_removed_per_rupee": 5.1645
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 10,
+          "spend": 4950000.0,
+          "eal": 27843078.72,
+          "risk_reduction": 28446124.58,
+          "risk_reduction_pct": 50.5357,
+          "risk_removed_per_rupee": 5.7467
+        }
+      ]
+    },
+    {
+      "budget": 10000000.0,
+      "seed": 42,
+      "n_trials": 20000,
+      "baseline_eal": 56480633.39,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27923841.63,
+          "risk_reduction": 28556791.76,
+          "risk_reduction_pct": 50.5603,
+          "risk_removed_per_rupee": 5.0543
+        }
+      ]
+    },
+    {
+      "budget": 10000000.0,
+      "seed": 7,
+      "n_trials": 20000,
+      "baseline_eal": 56448534.24,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27786763.33,
+          "risk_reduction": 28661770.91,
+          "risk_reduction_pct": 50.775,
+          "risk_removed_per_rupee": 5.0729
+        }
+      ]
+    },
+    {
+      "budget": 10000000.0,
+      "seed": 2026,
+      "n_trials": 20000,
+      "baseline_eal": 56289203.3,
+      "best_label": "optimizer",
+      "optimizer_vs_cvss_points": 0.0,
+      "optimizer_gap_to_optimum_points": 0.0,
+      "exact_optimum": true,
+      "rows": [
+        {
+          "strategy": "optimizer",
+          "label": "Optimizer (CP-SAT)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "cvss_first",
+          "label": "Highest-CVSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "epss_first",
+          "label": "Highest-EPSS first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "density_greedy",
+          "label": "Risk-reduction per \u20b9",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "cheapest_first",
+          "label": "Cheapest first",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "random",
+          "label": "Random",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        },
+        {
+          "strategy": "brute_force",
+          "label": "Exact optimum (brute force)",
+          "controls": 11,
+          "spend": 5650000.0,
+          "eal": 27841437.17,
+          "risk_reduction": 28447766.13,
+          "risk_reduction_pct": 50.5386,
+          "risk_removed_per_rupee": 5.035
+        }
+      ]
+    }
+  ]
+}
