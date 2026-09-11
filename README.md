@@ -184,10 +184,10 @@ sections, **/** focuses the question box.
 
 ## Contributing
 
-Module ownership, how to run the tests, and how to submit a contribution:
+Setup, conventions, and the traps worth knowing before you write code:
 [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-Everyone owns one module and contributes it by drag-and-drop in the browser — no git required.
+The backend suite runs entirely offline, so a clean clone can be fully verified with `make test`.
 
 ## Licence
 
