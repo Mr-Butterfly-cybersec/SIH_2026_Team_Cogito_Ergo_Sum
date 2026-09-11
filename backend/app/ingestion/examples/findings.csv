@@ -1,0 +1,19 @@
+finding_id,asset_id,cve_id,title,source,raw_severity,detected_at
+FND-0001,AST-ADM-WEB-01,CVE-2021-44228,Apache Log4j2 remote code execution,vulnerability_mgmt,CRITICAL,2026-08-14
+FND-0002,AST-EXCH-01,CVE-2021-34473,Microsoft Exchange ProxyShell RCE,vulnerability_mgmt,CRITICAL,2026-08-15
+FND-0003,AST-VPN-GW-01,CVE-2018-13379,Fortinet SSL VPN path traversal credential disclosure,vulnerability_mgmt,HIGH,2026-08-15
+FND-0004,AST-IDP-01,CVE-2020-1472,Netlogon privilege escalation (Zerologon),vulnerability_mgmt,CRITICAL,2026-08-17
+FND-0005,AST-ERP-01,CVE-2022-22965,Spring Framework RCE (Spring4Shell),vulnerability_mgmt,CRITICAL,2026-08-18
+FND-0006,AST-WKS-114,CVE-2017-0144,Windows SMBv1 remote code execution (EternalBlue),edr,CRITICAL,2026-08-19
+FND-0007,AST-WKS-207,CVE-2019-0708,Remote Desktop Services RCE (BlueKeep),edr,CRITICAL,2026-08-20
+FND-0008,AST-CLOUD-01,CVE-2023-34362,Progress MOVEit Transfer SQL injection,vulnerability_mgmt,CRITICAL,2026-08-21
+FND-0009,AST-ADM-WEB-02,CVE-2024-3400,Palo Alto PAN-OS command injection,vulnerability_mgmt,CRITICAL,2026-08-22
+FND-0010,AST-FILE-01,CVE-2023-4966,Citrix NetScaler session token disclosure (Citrix Bleed),vulnerability_mgmt,HIGH,2026-08-23
+FND-0011,AST-VPN-GW-01,CVE-2024-21762,FortiOS out-of-bounds write RCE,vulnerability_mgmt,CRITICAL,2026-08-24
+FND-0012,AST-ADM-WEB-01,CVE-2022-1388,F5 BIG-IP iControl REST authentication bypass,vulnerability_mgmt,CRITICAL,2026-08-25
+FND-0013,AST-IDP-01,CVE-2021-34527,Windows Print Spooler RCE (PrintNightmare),edr,HIGH,2026-08-26
+FND-0014,AST-EXCH-01,CVE-2021-26855,Microsoft Exchange ProxyLogon SSRF,vulnerability_mgmt,CRITICAL,2026-08-27
+FND-0015,AST-PROXY-01,CVE-2023-44487,HTTP/2 Rapid Reset denial of service,siem,HIGH,2026-08-28
+FND-0016,AST-ADM-WEB-02,CVE-2019-11043,PHP-FPM underflow RCE,vulnerability_mgmt,HIGH,2026-08-29
+FND-0017,AST-ERP-01,CVE-2023-46604,Apache ActiveMQ RCE,vulnerability_mgmt,CRITICAL,2026-08-29
+FND-0018,AST-DB-01,CVE-2023-38606,Apple WebKit kernel memory corruption,cspm,HIGH,2026-08-30
